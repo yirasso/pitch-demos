@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neves & Filha — Filigrana portuguesa na Rua das Flores, Porto</title>
+<meta name="description" content="Ourivesaria de família na Rua das Flores, Porto, há mais de 150 anos. Filigrana portuguesa: corações, brincos, colares e anéis.">
+<meta name="theme-color" content="#f6f0ec">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..600&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="preload" as="image" href="assets/img/filigrana-caravela-flor-1600.webp" imagesrcset="assets/img/filigrana-caravela-flor-900.webp 900w, assets/img/filigrana-caravela-flor-1600.webp 1600w" imagesizes="(min-width: 900px) 58vw, 100vw" fetchpriority="high">
+<style>
+:root {
+  /* Palette toned down ~25% in chroma; large surfaces near-neutral, the green band muted */
+  --plaster: oklch(0.958 0.008 50);
+  --panel: oklch(0.982 0.004 70);
+  --wood: oklch(0.29 0.023 45);
+  --wood-soft: oklch(0.44 0.019 45);
+  --line: color-mix(in oklch, var(--wood) 16%, transparent);
+  --green: oklch(0.38 0.034 170);
+  --green-deep: oklch(0.34 0.028 172);
+  --on-green: oklch(0.95 0.009 90);
+  --on-green-soft: oklch(0.85 0.015 120);
+  --brass: oklch(0.74 0.064 80);
+  --brass-ink: oklch(0.5 0.06 75);
+
+  --display: "Bodoni Moda", "Didot", "Bodoni 72", serif;
+  --text: "Hanken Grotesk", system-ui, sans-serif;
+  --wrap: 1240px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --section: clamp(96px, 12vh, 160px);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23c2a779' stroke-width='1.2'%3E%3Cpath d='M1.5 31V10C1.5 5.3 5.3 1.5 10 1.5h21'/%3E%3Cpath d='M7 24v-9c0-4.4 3.6-8 8-8h9'/%3E%3Ccircle cx='12.5' cy='12.5' r='1.6' fill='%23c2a779' stroke='none'/%3E%3C/svg%3E");
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scrollbar-color: color-mix(in oklch, var(--wood) 45%, transparent) var(--plaster); }
+body {
+  margin: 0;
+  background: var(--plaster);
+  color: var(--wood);
+  font: 400 1.0625rem/1.6 var(--text);
+  caret-color: var(--green);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--green); color: var(--on-green); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 0.22em; text-decoration-thickness: 1px; }
+:focus-visible { outline: 2px solid var(--brass-ink); outline-offset: 3px; border-radius: 2px; }
+.visit :focus-visible { outline-color: var(--brass); }
+
+h1, h2, h3 { font-family: var(--display); font-weight: 500; font-optical-sizing: auto; margin: 0; text-wrap: balance; letter-spacing: -0.015em; }
+p { margin: 0; text-wrap: pretty; }
+
+.wrap { width: min(100% - 2 * var(--gutter), var(--wrap)); margin-inline: auto; }
+.label { font: 500 0.75rem/1.3 var(--text); letter-spacing: 0.16em; text-transform: uppercase; }
+
+.skip { position: absolute; left: var(--gutter); top: -60px; z-index: 10; background: var(--wood); color: var(--panel); padding: 10px 16px; }
+.skip:focus { top: 12px; }
+
+/* Header: a single beam across the top */
+.top { position: absolute; inset: 0 0 auto; z-index: 5; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; border-bottom: 1px solid var(--line); }
+.brand { font-family: var(--display); font-size: 1.05rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+.top nav { display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); }
+.top nav ul { display: none; list-style: none; margin: 0; padding: 0; gap: clamp(20px, 3vw, 36px); }
+.top nav ul a { text-decoration: none; padding-block: 8px; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 0.4s var(--ease); }
+.top nav ul a:hover { background-size: 100% 1px; }
+@media (min-width: 760px) { .top nav ul { display: flex; } }
+
+.lang { display: inline-flex; align-items: center; gap: 2px; }
+.lang button { appearance: none; border: 0; background: none; color: var(--wood-soft); font: 500 0.75rem/1 var(--text); letter-spacing: 0.16em; padding: 10px 6px; min-width: 36px; min-height: 36px; cursor: pointer; }
+.lang button[aria-pressed="true"] { color: var(--wood); text-decoration: underline; text-underline-offset: 0.5em; }
+.lang span { color: var(--line); }
+
+/* Framed panel: the ceiling's coffer, with stencilled corners */
+.panel { position: relative; margin: 0; background: var(--panel); padding: clamp(8px, 1vw, 14px); border: 1px solid var(--line); box-shadow: 0 18px 40px -28px color-mix(in oklch, var(--wood) 55%, transparent); }
+.panel .frame { position: relative; overflow: hidden; background: var(--wood); }
+.panel .frame img { width: 100%; height: 100%; object-fit: cover; }
+.panel .frame::before { content: ""; position: absolute; z-index: 2; top: 10px; left: 10px; width: clamp(22px, 2.4vw, 32px); aspect-ratio: 1; background: var(--corner) center / contain no-repeat; pointer-events: none; }
+
+/* Buttons */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 2px; font: 600 0.95rem/1 var(--text); letter-spacing: 0.02em; text-decoration: none; border: 1px solid transparent; transition: background-color 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.3s var(--ease); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--green); color: var(--on-green); }
+.btn-primary:hover { background: var(--green-deep); }
+.btn-ghost { border-color: color-mix(in oklch, var(--wood) 35%, transparent); color: var(--wood); }
+.btn-ghost:hover { border-color: var(--wood); background: var(--panel); }
+
+/* Hero */
+.hero { padding-top: calc(76px + clamp(28px, 6vh, 72px)); padding-bottom: var(--section); }
+.hero .wrap { display: grid; gap: clamp(36px, 5vw, 72px); align-items: center; }
+.hero-media { order: -1; }
+.hero-media .frame { aspect-ratio: 3 / 2; }
+.hero h1 { font-size: clamp(2.6rem, 5.2vw, 5rem); line-height: 1.02; max-width: 12.5ch; }
+.lede { margin-top: clamp(18px, 2.4vh, 26px); max-width: 34ch; font-size: clamp(1.06rem, 1.2vw, 1.2rem); color: var(--wood-soft); }
+.hero .actions { margin-top: clamp(28px, 4vh, 40px); }
+@media (min-width: 900px) {
+  .hero { min-height: 100svh; display: grid; align-items: center; }
+  .hero .wrap { grid-template-columns: 5fr 7fr; }
+  .hero-media { order: 0; }
+}
+
+/* Section rhythm */
+section { padding-block: var(--section); }
+.head { display: grid; gap: 18px 48px; margin-bottom: clamp(40px, 6vh, 72px); align-items: end; }
+.head h2, .house h2, .visit h2 { font-size: clamp(2.1rem, 3.8vw, 3.5rem); line-height: 1.06; }
+.head p { max-width: 38ch; color: var(--wood-soft); }
+@media (min-width: 900px) { .head { grid-template-columns: 7fr 5fr; } .head p { justify-self: end; } }
+
+/* Pieces: three coffers, a swipe row on phones */
+.grid { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); scrollbar-width: thin; }
+.grid > * { scroll-snap-align: start; }
+@media (min-width: 760px) { .grid { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.4vw, 36px); overflow: visible; margin-inline: 0; padding-inline: 0; } }
+.piece .frame { aspect-ratio: 3 / 4; }
+.piece figcaption { padding: 20px 6px 10px; }
+.piece h3 { font-size: clamp(1.35rem, 1.8vw, 1.6rem); line-height: 1.15; }
+.piece p { margin-top: 6px; color: var(--wood-soft); font-size: 0.98rem; }
+
+/* The house */
+.house .wrap { display: grid; gap: clamp(36px, 5vw, 80px); align-items: center; }
+.house .big .frame { aspect-ratio: 3 / 2; }
+.house-text p { margin-top: 22px; max-width: 36ch; color: var(--wood-soft); }
+.house .small { margin-top: clamp(32px, 5vh, 56px); width: min(62%, 260px); }
+.house .small .frame { aspect-ratio: 1; }
+@media (min-width: 900px) { .house .wrap { grid-template-columns: 8fr 4fr; } }
+
+/* Visit: the one muted band, the shopfront green */
+.visit { background: var(--green-deep); color: var(--on-green); }
+.visit .wrap { display: grid; gap: clamp(36px, 5vw, 80px); align-items: center; }
+.visit .panel { background: color-mix(in oklch, var(--green-deep) 70%, var(--on-green)); border-color: color-mix(in oklch, var(--on-green) 20%, transparent); box-shadow: none; }
+.visit .frame { aspect-ratio: 3 / 2; }
+.visit p { margin-top: 22px; max-width: 36ch; color: var(--on-green-soft); }
+.visit .actions { margin-top: 32px; }
+.visit .btn-primary { background: var(--on-green); color: var(--green-deep); }
+.visit .btn-primary:hover { background: var(--panel); }
+.visit .btn-ghost { color: var(--on-green); border-color: color-mix(in oklch, var(--on-green) 40%, transparent); }
+.visit .btn-ghost:hover { background: color-mix(in oklch, var(--on-green) 10%, transparent); border-color: var(--on-green); }
+@media (min-width: 900px) { .visit .wrap { grid-template-columns: 7fr 5fr; } }
+
+/* Footer */
+footer { padding-block: clamp(64px, 9vh, 104px) 40px; }
+.foot { display: grid; gap: 40px 48px; }
+@media (min-width: 760px) { .foot { grid-template-columns: 1.1fr 1.4fr 1fr; } }
+.foot h2 { font-size: 1.35rem; letter-spacing: 0.02em; }
+.foot address { font-style: normal; margin-top: 12px; color: var(--wood-soft); }
+.foot .label { color: var(--wood-soft); margin-bottom: 14px; }
+.hours { border-collapse: collapse; width: 100%; max-width: 380px; font-variant-numeric: tabular-nums; }
+.hours th, .hours td { text-align: left; font-weight: 400; padding: 9px 12px 9px 0; border-top: 1px dashed var(--line); vertical-align: top; }
+.hours tr:last-child th, .hours tr:last-child td { border-bottom: 1px dashed var(--line); }
+.hours td { color: var(--wood-soft); white-space: nowrap; }
+.contacts { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-variant-numeric: tabular-nums; }
+.contacts a { display: inline-block; padding-block: 6px; text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 0.4s var(--ease); }
+.contacts a:hover { background-size: 100% 1px; }
+.contacts small { color: var(--wood-soft); font-size: 0.85rem; margin-right: 8px; }
+.base { margin-top: clamp(48px, 7vh, 80px); padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 32px; color: var(--wood-soft); font-size: 0.85rem; }
+.base .lang { margin-left: -6px; }
+
+/* Phones: Call + Directions stay at hand once the hero buttons scroll away */
+.dock { display: none; }
+@media (max-width: 759px) {
+  .dock { position: fixed; inset: auto 0 0; z-index: 6; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom)); background: color-mix(in oklch, var(--plaster) 94%, transparent); border-top: 1px solid var(--line); visibility: hidden; transform: translateY(100%); transition: transform 0.4s var(--ease), visibility 0s 0.4s; }
+  .dock.on { visibility: visible; transform: none; transition: transform 0.4s var(--ease); }
+  .dock .btn { min-height: 48px; padding: 0 12px; }
+  footer { padding-bottom: 104px; }
+}
+
+/* Motion: coffers open from the frame, once, quickly */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal .frame img { clip-path: inset(0 0 100% 0); transition: clip-path 0.9s var(--ease); }
+  .js .reveal.is-in .frame img { clip-path: inset(0 0 0 0); }
+  .js .rise { opacity: 0; transform: translateY(14px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+  .js .rise.is-in { opacity: 1; transform: none; }
+  .js .piece.reveal:nth-child(2) .frame img { transition-delay: 0.08s; }
+  .js .piece.reveal:nth-child(3) .frame img { transition-delay: 0.16s; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo" data-i18n="skip">Saltar para o conteúdo</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#conteudo">Neves &amp; Filha</a>
+    <nav aria-label="Principal" data-i18n-aria="navLabel">
+      <ul>
+        <li><a href="#pecas" data-i18n="navPieces">Peças</a></li>
+        <li><a href="#casa" data-i18n="navHouse">A casa</a></li>
+        <li><a href="#visitar" data-i18n="navVisit">Visitar</a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="langLabel">
+        <button type="button" data-lang="pt" aria-pressed="true" lang="pt-PT">PT</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1 id="h-hero" data-i18n="h1">Filigrana portuguesa, na Rua das Flores.</h1>
+        <p class="lede" data-i18n="lede">Ourivesaria de família, há mais de 150 anos. Corações, brincos, colares e anéis.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+351222000233">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.5 1.5 0 0 1-1.6 1.5C10.8 20 4 13.2 3.5 5.1A1.5 1.5 0 0 1 5 3.5Z"/></svg>
+            <span data-i18n="call">Ligar</span>
+          </a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Neves%20%26%20Filha%2C%20Rua%20das%20Flores%20115%2C%204050-266%20Porto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            <span data-i18n="directions">Como chegar</span>
+          </a>
+        </div>
+      </div>
+      <figure class="hero-media panel">
+        <div class="frame">
+          <img src="assets/img/filigrana-caravela-flor-1600.webp" srcset="assets/img/filigrana-caravela-flor-900.webp 900w, assets/img/filigrana-caravela-flor-1600.webp 1600w" sizes="(min-width: 900px) 58vw, 100vw" width="1600" height="1068" fetchpriority="high" alt="Caravela e flor em filigrana prateada, expostas sobre veludo preto na vitrine da loja" data-i18n-alt="altHero">
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="pieces" id="pecas" aria-labelledby="h-pieces">
+    <div class="wrap">
+      <div class="head rise">
+        <h2 id="h-pieces" data-i18n="piecesTitle">Ouro e prata, trabalhados em fio.</h2>
+        <p data-i18n="piecesText">Peças clássicas da joalharia portuguesa, para oferecer ou para ficar na família.</p>
+      </div>
+      <div class="grid">
+        <figure class="piece panel reveal">
+          <div class="frame">
+            <img src="assets/img/coracao-viana-filigrana.webp" width="660" height="880" loading="lazy" decoding="async" alt="Pormenor de um coração de Viana em filigrana de ouro, com flores e espirais de fio" data-i18n-alt="altHeart">
+          </div>
+          <figcaption><h3 data-i18n="p1">Corações de filigrana</h3><p data-i18n="p1t">O coração de Viana, símbolo da filigrana portuguesa.</p></figcaption>
+        </figure>
+        <figure class="piece panel reveal">
+          <div class="frame">
+            <img src="assets/img/vitrine-colares-brincos.webp" width="660" height="880" loading="lazy" decoding="async" alt="Vitrines de parede com molduras pretas, cheias de colares e brincos de ouro e prata" data-i18n-alt="altVitrine">
+          </div>
+          <figcaption><h3 data-i18n="p2">Colares e brincos</h3><p data-i18n="p2t">Na vitrine da loja, peça a peça.</p></figcaption>
+        </figure>
+        <figure class="piece panel reveal">
+          <div class="frame">
+            <img src="assets/img/anel-filigrana.webp" width="600" height="800" loading="lazy" decoding="async" alt="Anel de ouro com flores em filigrana, sobre veludo escuro" data-i18n-alt="altRing">
+          </div>
+          <figcaption><h3 data-i18n="p3">Anéis</h3><p data-i18n="p3t">Clássicos, ou feitos por medida.</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="house" id="casa" aria-labelledby="h-house">
+    <div class="wrap">
+      <figure class="big panel reveal">
+        <div class="frame">
+          <img src="assets/img/interior-balcao-1600.webp" srcset="assets/img/interior-balcao-900.webp 900w, assets/img/interior-balcao-1600.webp 1600w" sizes="(min-width: 900px) 62vw, 100vw" width="1600" height="1068" loading="lazy" decoding="async" alt="Interior da loja: balcão de madeira escura e vidro, vitrines iluminadas, relógios de parede e teto em caixotões" data-i18n-alt="altInterior">
+        </div>
+      </figure>
+      <div class="house-text rise">
+        <h2 id="h-house" data-i18n="houseTitle">Entrar aqui é voltar atrás no tempo.</h2>
+        <p data-i18n="houseText">Loja Porto de Tradição. O balcão de madeira e vidro, os tetos trabalhados e os espelhos são os originais. Num pequeno livro, os clientes deixam as suas histórias.</p>
+        <figure class="small panel reveal">
+          <div class="frame">
+            <img src="assets/img/teto-trabalhado.webp" width="700" height="700" loading="lazy" decoding="async" alt="Teto da loja em caixotões de madeira, com ornamentos pintados a dourado" data-i18n-alt="altCeiling">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visitar" aria-labelledby="h-visit">
+    <div class="wrap">
+      <figure class="panel reveal">
+        <div class="frame">
+          <img src="assets/img/fachada-rua-das-flores.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Fachada verde da loja Neves &amp; Filha na Rua das Flores, com letreiro dourado e montras iluminadas" data-i18n-alt="altFacade">
+        </div>
+      </figure>
+      <div class="rise">
+        <h2 id="h-visit">Rua das Flores, 115–119</h2>
+        <p data-i18n="visitText">A dois passos da Estação de São Bento. Entre para ver as vitrines, ou ligue a perguntar por uma peça.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Neves%20%26%20Filha%2C%20Rua%20das%20Flores%20115%2C%204050-266%20Porto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            <span data-i18n="directions">Como chegar</span>
+          </a>
+          <a class="btn btn-ghost" href="tel:+351222000233">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.5 1.5 0 0 1-1.6 1.5C10.8 20 4 13.2 3.5 5.1A1.5 1.5 0 0 1 5 3.5Z"/></svg>
+            <span data-i18n="call">Ligar</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="dock" aria-label="Contacto rápido" data-i18n-aria="dockLabel">
+  <a class="btn btn-primary" href="tel:+351222000233"><span data-i18n="call">Ligar</span></a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Neves%20%26%20Filha%2C%20Rua%20das%20Flores%20115%2C%204050-266%20Porto" target="_blank" rel="noopener"><span data-i18n="directions">Como chegar</span></a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h2>Neves &amp; Filha, Lda.</h2>
+        <address>Rua das Flores, 115–119<br>4050-266 Porto</address>
+      </div>
+      <div>
+        <p class="label" data-i18n="hoursTitle">Horário</p>
+        <table class="hours">
+          <tr><th scope="row" data-i18n="weekdays">Segunda a sexta</th><td>10:30–12:30 · 15:00–19:00</td></tr>
+          <tr><th scope="row" data-i18n="saturday">Sábado</th><td>10:30–13:00</td></tr>
+          <tr><th scope="row" data-i18n="sunday">Domingo</th><td data-i18n="closed">Encerrado</td></tr>
+        </table>
+      </div>
+      <div>
+        <p class="label" data-i18n="contactsTitle">Contactos</p>
+        <ul class="contacts">
+          <li><small data-i18n="phone">Telefone</small><a href="tel:+351222000233">222 000 233</a></li>
+          <li><small data-i18n="mobile">Telemóvel</small><a href="tel:+351917710968">917 710 968</a></li>
+          <li><a href="mailto:nevesefilha1850@gmail.com">nevesefilha1850@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="langLabel">
+        <button type="button" data-lang="pt" aria-pressed="true" lang="pt-PT">PT</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <p><span data-i18n="credit">Fotografia do coração</span>: Paula Fontes Moreira, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+
+  var en = {
+    title: 'Neves & Filha — Portuguese filigree on Rua das Flores, Porto',
+    skip: 'Skip to content', navLabel: 'Main', langLabel: 'Language',
+    navPieces: 'Pieces', navHouse: 'The house', navVisit: 'Visit',
+    dockLabel: 'Quick contact',
+    h1: 'Portuguese filigree, on Rua das Flores.',
+    lede: 'A family jeweller for more than 150 years. Hearts, earrings, necklaces and rings.',
+    call: 'Call', directions: 'Directions',
+    piecesTitle: 'Gold and silver, worked in fine wire.',
+    piecesText: 'Classic Portuguese jewellery, to give as a gift or to keep in the family.',
+    p1: 'Filigree hearts', p1t: 'The Viana heart, emblem of Portuguese filigree.',
+    p2: 'Necklaces and earrings', p2t: 'In the shop’s display cases, piece by piece.',
+    p3: 'Rings', p3t: 'Classic designs, or made to measure.',
+    houseTitle: 'Step inside and step back in time.',
+    houseText: 'A Porto de Tradição shop. The wood-and-glass counter, the worked ceilings and the mirrors are all original. In a small book, customers leave their own stories.',
+    visitText: 'A short walk from São Bento station. Come in to see the display cases, or call to ask about a piece.',
+    hoursTitle: 'Opening hours', weekdays: 'Monday to Friday', saturday: 'Saturday', sunday: 'Sunday', closed: 'Closed',
+    contactsTitle: 'Contact', phone: 'Phone', mobile: 'Mobile',
+    credit: 'Heart photograph',
+    altHero: 'Silver filigree caravel and flower on black velvet in the shop’s display case',
+    altHeart: 'Detail of a gold filigree Viana heart, with flowers and spirals of fine wire',
+    altVitrine: 'Black-framed wall display cases filled with gold and silver necklaces and earrings',
+    altRing: 'Gold ring with filigree flowers on dark velvet',
+    altInterior: 'Inside the shop: dark wood and glass counter, lit display cases, wall clocks and a coffered ceiling',
+    altCeiling: 'The shop’s coffered wooden ceiling with gilt painted ornaments',
+    altFacade: 'Green shopfront of Neves & Filha on Rua das Flores, with gilt lettering and lit windows'
+  };
+
+  var pt = { title: document.title };
+  var text = document.querySelectorAll('[data-i18n]');
+  var alts = document.querySelectorAll('[data-i18n-alt]');
+  var arias = document.querySelectorAll('[data-i18n-aria]');
+  text.forEach(function (n) { pt[n.dataset.i18n] = n.textContent; });
+  alts.forEach(function (n) { pt[n.dataset.i18nAlt] = n.alt; });
+  arias.forEach(function (n) { pt[n.dataset.i18nAria] = n.getAttribute('aria-label'); });
+
+  function setLang(lang) {
+    var d = lang === 'en' ? en : pt;
+    text.forEach(function (n) { n.textContent = d[n.dataset.i18n]; });
+    alts.forEach(function (n) { n.alt = d[n.dataset.i18nAlt]; });
+    arias.forEach(function (n) { n.setAttribute('aria-label', d[n.dataset.i18nAria]); });
+    document.title = d.title;
+    root.lang = lang === 'en' ? 'en' : 'pt-PT';
+    document.querySelectorAll('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    try { localStorage.setItem('nf-lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('[data-lang]').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.dataset.lang); });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem('nf-lang'); } catch (e) {}
+  if (saved === 'en') setLang('en');
+
+  // Phone dock shows only while neither the hero nor the visit buttons are on screen.
+  var dock = document.querySelector('.dock');
+  if ('IntersectionObserver' in window) {
+    var seen = new Set();
+    var dio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? seen.add(e.target) : seen.delete(e.target); });
+      dock.classList.toggle('on', seen.size === 0);
+    });
+    document.querySelectorAll('main .actions').forEach(function (a) { dio.observe(a); });
+  }
+
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('.reveal, .rise');
+  if (still || !('IntersectionObserver' in window)) {
+    targets.forEach(function (t) { t.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -12% 0px' });
+  targets.forEach(function (t) { io.observe(t); });
+  // Failsafe: never leave content hidden if the observer does not fire.
+  setTimeout(function () { targets.forEach(function (t) { t.classList.add('is-in'); }); }, 4000);
+})();
+</script>
+</body>
+</html>
