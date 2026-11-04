@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casa Chinesa · Mercearia natural na Baixa do Porto</title>
+<meta name="description" content="Mercearia na Rua Sá da Bandeira, 343, Porto, desde 1938. Leguminosas, frutos secos, especiarias, chás, bacalhau, queijos e produtos macrobióticos e sem glúten, a granel.">
+<meta name="theme-color" content="#f4f6f3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23353a42'/%3E%3Crect x='3' y='3' width='12' height='26' fill='%23eef1ee'/%3E%3Crect x='17' y='3' width='12' height='12' fill='%23ebdfbd'/%3E%3Crect x='17' y='17' width='12' height='12' fill='%23eef1ee'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/raizes-especiarias-1600.webp" imagesrcset="assets/img/raizes-especiarias-900.webp 900w, assets/img/raizes-especiarias-1600.webp 1600w" imagesizes="(min-width: 900px) 58vw, 100vw" fetchpriority="high">
+<style>
+:root{
+  /* seeded glass ground, graphite glazing bars, two muted coloured panes */
+  --glass:oklch(0.972 0.006 160);
+  --glass-2:oklch(0.955 0.008 160);
+  --pane:oklch(0.985 0.004 160);
+  --bar:oklch(0.33 0.014 255);
+  --ink:oklch(0.25 0.014 255);
+  --ink-soft:oklch(0.43 0.014 255);
+  /* accents toned down ~25% in chroma; large panes lifted towards neutral */
+  --cobalt:oklch(0.46 0.075 262);
+  --cobalt-deep:oklch(0.38 0.068 262);
+  --cobalt-pane:oklch(0.95 0.016 258);
+  --ochre:oklch(0.78 0.083 85);
+  --ochre-pane:oklch(0.95 0.026 88);
+  --ok:oklch(0.55 0.075 150);
+  --shut:oklch(0.55 0.075 30);
+
+  --b:5px;                       /* glazing bar, true thickness at every size */
+  --frame:8px;                   /* outer frame */
+  --pad:clamp(20px, 5vw, 72px);
+  --section:clamp(96px, 12vh, 160px);
+  --maxw:1320px;
+  --ease:cubic-bezier(.16,1,.3,1);
+
+  --sans:"Archivo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (max-width:640px){ :root{ --b:4px; --frame:6px } }
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--glass);color:var(--ink);
+  font-family:var(--sans);font-size:clamp(16px, .35vw + 14.8px, 18px);line-height:1.6;
+  font-variation-settings:"wdth" 100;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+::selection{background:var(--ochre);color:var(--ink)}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+html{scrollbar-color:var(--bar) var(--glass-2)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:12px;top:12px;z-index:50;background:var(--ink);color:var(--pane);padding:10px 16px;transform:translateY(-200%);transition:transform .2s}
+.skip:focus{transform:none}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+
+h1,h2,h3{margin:0;font-weight:640;line-height:1.02;letter-spacing:-.02em;text-wrap:balance;font-variation-settings:"wdth" 78}
+h1{font-size:clamp(2.5rem, 3.6vw + .9rem, 4.4rem)}
+h2{font-size:clamp(2rem, 3vw + .8rem, 3.6rem)}
+h3{font-size:clamp(1.15rem, .5vw + 1rem, 1.4rem);letter-spacing:-.01em;font-variation-settings:"wdth" 86}
+p{margin:0;max-width:60ch;text-wrap:pretty}
+.lede{color:var(--ink-soft);font-size:clamp(1.05rem,.4vw + 1rem,1.2rem)}
+.sign{font-size:.78rem;font-weight:620;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:"wdth" 92}
+
+/* ---------- glazing: the grid's own background is the bar ---------- */
+.glazing{display:grid;gap:var(--b);background:var(--bar);padding:var(--frame)}
+.pane{background:var(--pane);position:relative;overflow:hidden;min-width:0}
+.pane--ochre{background:var(--ochre-pane)}
+.pane--cobalt{background:var(--cobalt-pane)}
+.pane--photo{background:var(--bar)}
+.pane--photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pad{padding:clamp(24px, 3.2vw, 48px)}
+
+/* photos emerge from pale glass to full colour once, as they come into view */
+.emerge img{transition:filter 1.4s var(--ease), transform 1.6s var(--ease)}
+.js .emerge:not(.in) img{filter:saturate(.25) brightness(1.12) contrast(.86);transform:scale(1.035)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:0 1.35em;
+  font:inherit;font-weight:600;font-size:1rem;text-decoration:none;letter-spacing:.005em;
+  border:2px solid var(--cobalt);transition:background-color .25s, color .25s, border-color .25s, box-shadow .25s;
+}
+.btn svg{width:18px;height:18px;flex:none}
+.btn--main{background:var(--cobalt);color:var(--pane)}
+.btn--main:hover{background:var(--cobalt-deep);border-color:var(--cobalt-deep);box-shadow:0 6px 18px -8px color-mix(in oklch, var(--cobalt-deep) 60%, transparent)}
+.btn--line{color:var(--cobalt-deep);background:transparent}
+.btn--line:hover{background:var(--cobalt-pane)}
+.btn:active{transform:translateY(1px)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in oklch, var(--glass) 88%, transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in oklch, var(--bar) 18%, transparent)}
+.top .wrap{display:flex;align-items:center;gap:clamp(12px,2.4vw,36px);min-height:68px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.mark svg{width:26px;height:26px}
+.mark b{font-size:1.02rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-variation-settings:"wdth" 80}
+.nav{display:flex;gap:28px}
+.nav a{text-decoration:none;font-weight:520;color:var(--ink-soft);padding:6px 0;background:linear-gradient(var(--ochre),var(--ochre)) 0 100%/0 2px no-repeat;transition:background-size .3s var(--ease),color .2s}
+.nav a:hover{color:var(--ink);background-size:100% 2px}
+.lang{display:flex;border:1.5px solid color-mix(in oklch, var(--bar) 40%, transparent)}
+.lang button{font:inherit;font-size:.8rem;font-weight:650;letter-spacing:.08em;min-width:40px;min-height:36px;border:0;background:transparent;color:var(--ink-soft);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--bar);color:var(--pane)}
+.top .btn{min-height:44px;padding:0 1em;font-size:.95rem;transition:opacity .3s, visibility .3s, background-color .25s}
+/* header Call steps back while an in-page Call/Directions pair is on screen: max two CTAs at once */
+.top .btn.is-off{opacity:0;visibility:hidden}
+@media (max-width:760px){
+  .nav{display:none}
+  .top .btn .t{display:none}
+  .top .btn{padding:0 .8em}
+}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(20px,3vw,40px) var(--section)}
+.hero .glazing{grid-template-columns:1fr;grid-template-areas:"photo" "copy" "status"}
+.hero .pane--photo{grid-area:photo;aspect-ratio:4/3.3}
+.hero .copy{grid-area:copy;display:flex;flex-direction:column;justify-content:center;gap:clamp(18px,2.4vw,28px)}
+.hero .status{grid-area:status}
+@media (min-width:900px){
+  .hero .glazing{grid-template-columns:6fr 7fr;grid-template-rows:1fr auto;grid-template-areas:"copy photo" "status photo";min-height:min(calc(100svh - 120px), 820px)}
+  .hero .pane--photo{aspect-ratio:auto}
+  .hero .copy{padding:clamp(32px,4vw,64px)}
+}
+.status{display:flex;align-items:center;gap:14px;padding:20px clamp(24px,3.2vw,48px)}
+.status .dot{width:10px;height:10px;border-radius:50%;background:var(--ink-soft);flex:none;box-shadow:0 0 0 4px color-mix(in oklch, currentColor 14%, transparent)}
+.status[data-open="1"] .dot{background:var(--ok);color:var(--ok)}
+.status[data-open="0"] .dot{background:var(--shut);color:var(--shut)}
+.status p{font-weight:560}
+.status small{display:block;font-weight:420;color:var(--ink-soft);font-size:.92rem}
+
+/* ---------- products ---------- */
+.section{padding-block:0 var(--section)}
+.head{margin-bottom:clamp(40px,5vw,64px)}
+.goods{grid-template-columns:1fr 1fr}
+/* photos keep their ratio and align across a row; the label pane absorbs uneven name lengths */
+.good{display:grid;grid-template-rows:auto 1fr;gap:var(--b);background:var(--bar)}
+.good--lead{grid-template-rows:1fr auto}
+.good .pane--photo{aspect-ratio:4/5}
+.good .label{padding:16px 18px 20px;transition:background-color .5s var(--ease)}
+.good .label p{color:var(--ink-soft);font-size:.95rem;line-height:1.45;margin-top:4px}
+.good--lead{grid-column:1 / -1}
+.good--lead .pane--photo{aspect-ratio:4/3}
+@media (min-width:900px){
+  .goods{grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto}
+  .good--lead{grid-column:1 / 3;grid-row:1 / 3}
+  .good .pane--photo{aspect-ratio:5/4}
+  .good--lead .pane--photo{aspect-ratio:auto;min-height:360px}
+  .good--lead .label{padding:24px 28px 28px}
+}
+@media (max-width:420px){.good .label{padding:14px 14px 16px}}
+/* hover backlights the pane: glass brightens, nothing slides */
+.good .pane--photo img{transition:filter .6s var(--ease), transform 1.6s var(--ease)}
+@media (hover:hover){
+  .good:hover .label{background:var(--ochre-pane)}
+  .good:hover .pane--photo img{filter:brightness(1.07) saturate(1.06)}
+}
+
+/* ---------- story ---------- */
+.story .glazing{grid-template-columns:1fr}
+.story .pane--photo{aspect-ratio:3/2}
+.story .copy{display:flex;flex-direction:column;justify-content:flex-end;gap:22px}
+@media (min-width:900px){
+  .story .glazing{grid-template-columns:7fr 5fr}
+  .story .pane--photo{aspect-ratio:auto;min-height:520px}
+  .story .copy{padding:clamp(36px,4vw,64px)}
+}
+
+/* ---------- visit ---------- */
+.visit .glazing{grid-template-columns:1fr}
+.visit .facade{display:grid}
+.visit .facade .pane--photo{aspect-ratio:3/2}
+.visit .info{display:grid;gap:32px;align-content:start;padding:clamp(24px, 3.2vw, 48px)}
+@media (min-width:900px){
+  .visit .glazing{grid-template-columns:6fr 6fr}
+  .visit .facade .pane--photo{aspect-ratio:auto;min-height:420px}
+  .visit .info{padding:clamp(36px,4vw,64px)}
+}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;max-width:440px}
+.hours td{padding:10px 0;border-bottom:1px solid color-mix(in oklch, var(--bar) 16%, transparent)}
+.hours td+td{text-align:right}
+.hours tr.today td{font-weight:650;color:var(--ink)}
+.hours tr.today td:first-child::before{content:"";display:inline-block;width:7px;height:7px;background:var(--ochre);margin-right:10px;vertical-align:middle}
+.hours tr{color:var(--ink-soft)}
+.addr{font-style:normal;font-size:1.1rem;line-height:1.5}
+.contacts{display:grid;justify-items:start}
+.contacts a{display:inline-flex;align-items:center;min-height:44px;text-decoration-color:color-mix(in oklch, var(--cobalt) 45%, transparent);text-underline-offset:4px;font-variant-numeric:tabular-nums}
+.contacts a:hover{color:var(--cobalt-deep);text-decoration-color:currentColor}
+.note{color:var(--ink-soft)}
+
+/* ---------- footer ---------- */
+footer{border-top:var(--b) solid var(--bar);padding-block:48px 40px;font-size:.92rem;color:var(--ink-soft)}
+footer .wrap{display:grid;gap:24px}
+@media (min-width:900px){footer .wrap{grid-template-columns:1fr 1.4fr 1.4fr;align-items:start}}
+footer b{color:var(--ink);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:"wdth" 80}
+footer a{text-underline-offset:3px}
+footer p{max-width:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}
+  .js .emerge:not(.in) img{filter:none;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Saltar para o conteúdo</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#main" aria-label="Casa Chinesa">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" fill="oklch(0.33 0.014 255)"/><rect x="2.5" y="2.5" width="9.5" height="21" fill="oklch(0.985 0.004 160)"/><rect x="14" y="2.5" width="9.5" height="9.5" fill="oklch(0.95 0.026 88)"/><rect x="14" y="14" width="9.5" height="9.5" fill="oklch(0.985 0.004 160)"/></svg>
+      <b>Casa Chinesa</b>
+    </a>
+    <nav class="nav" aria-label="Principal" data-i18n-aria="navLabel">
+      <a href="#produtos" data-i18n="navGoods">Produtos</a>
+      <a href="#visitar" data-i18n="navVisit">Visitar</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="langLabel">
+      <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn--main top-call" href="tel:+351222006578" aria-label="Ligar para a Casa Chinesa" data-i18n-aria="callAria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.4a12 12 0 0 0 7 7l1.4-2.3L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span class="t" data-i18n="call">Ligar</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div class="glazing">
+        <figure class="pane pane--photo emerge" style="margin:0">
+          <img src="assets/img/raizes-especiarias-1600.webp"
+               srcset="assets/img/raizes-especiarias-900.webp 900w, assets/img/raizes-especiarias-1600.webp 1600w"
+               sizes="(min-width: 900px) 58vw, 100vw" width="1600" height="1066" fetchpriority="high"
+               style="object-position:42% 60%"
+               alt="Cestos de alfarroba, gengibre, tamarindo, inhame e malaguetas à porta da Casa Chinesa"
+               data-i18n-alt="heroAlt">
+        </figure>
+        <div class="pane copy pad">
+          <h1 id="h1" data-i18n="h1">A mercearia natural da Baixa do Porto.</h1>
+          <p class="lede" data-i18n="heroP">Leguminosas, frutos secos, especiarias, chás e produtos macrobióticos e sem glúten, a granel e na medida que quiser.</p>
+          <div class="ctas">
+            <a class="btn btn--main" href="tel:+351222006578"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.4a12 12 0 0 0 7 7l1.4-2.3L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span data-i18n="callNum">Ligar 222 006 578</span></a>
+            <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Chinesa+Rua+S%C3%A1+da+Bandeira+343+Porto" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-i18n="directions">Como chegar</span></a>
+          </div>
+        </div>
+        <div class="pane pane--ochre status" data-open="" aria-live="polite">
+          <span class="dot" aria-hidden="true"></span>
+          <p><span id="status-now" data-i18n="statusDefault">Seg–Sex 9:00–19:00 · Sáb 9:00–13:00</span><small>Rua Sá da Bandeira, 343</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="produtos" aria-labelledby="h-goods">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="h-goods" data-i18n="goodsH">Pesado ao balcão, à sua medida.</h2>
+      </div>
+      <div class="glazing goods">
+        <article class="good good--lead">
+          <div class="pane pane--photo emerge"><img src="assets/img/leguminosas-granel.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Sacos abertos de lentilhas, feijão e cereais a granel" data-i18n-alt="legAlt"></div>
+          <div class="pane label"><h3 data-i18n="legH">Leguminosas e farinhas</h3><p data-i18n="legP">Grão, feijão, lentilhas e farinhas, de norte a sul do país.</p></div>
+        </article>
+        <article class="good">
+          <div class="pane pane--photo emerge"><img src="assets/img/frutos-secos.webp" width="800" height="1000" loading="lazy" decoding="async" alt="Mistura de amêndoas, cajus, nozes e avelãs" data-i18n-alt="nutsAlt"></div>
+          <div class="pane label"><h3 data-i18n="nutsH">Frutos secos e mel</h3></div>
+        </article>
+        <article class="good">
+          <div class="pane pane--photo emerge"><img src="assets/img/chas-folha.webp" width="800" height="1000" loading="lazy" decoding="async" alt="Colheres com diferentes chás de folha solta" data-i18n-alt="teaAlt"></div>
+          <div class="pane label"><h3 data-i18n="teaH">Chás e café</h3></div>
+        </article>
+        <article class="good">
+          <div class="pane pane--photo emerge"><img src="assets/img/bacalhau-montra.webp" width="380" height="420" loading="lazy" decoding="async" alt="Bacalhau seco empilhado na montra da Casa Chinesa" data-i18n-alt="codAlt"></div>
+          <div class="pane label"><h3 data-i18n="codH">Bacalhau</h3></div>
+        </article>
+        <article class="good">
+          <div class="pane pane--photo emerge"><img src="assets/img/queijos.webp" width="800" height="500" loading="lazy" decoding="async" alt="Rodas e fatias de queijo curado" data-i18n-alt="cheeseAlt"></div>
+          <div class="pane label"><h3 data-i18n="cheeseH">Queijo da serra e fumeiro</h3></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story" aria-labelledby="h-story">
+    <div class="wrap">
+      <div class="glazing">
+        <div class="pane pane--photo emerge"><img src="assets/img/balcao-frascos.webp" width="717" height="478" loading="lazy" decoding="async" alt="O balcão da Casa Chinesa com a parede de frascos de especiarias e chás" data-i18n-alt="storyAlt"></div>
+        <div class="pane pane--cobalt copy pad">
+          <h2 id="h-story" data-i18n="storyH">Desde 1938, ao lado do Bolhão.</h2>
+          <p data-i18n="storyP">Fundada por Joaquim Mota Cardoso e Fernando Carneiro da Silva, a casa continua nas mãos dos seus herdeiros.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visit" id="visitar" aria-labelledby="h-visit">
+    <div class="wrap">
+      <div class="glazing">
+        <figure class="facade" style="margin:0">
+          <div class="pane pane--photo emerge"><img src="assets/img/fachada-sa-da-bandeira.webp" width="717" height="478" loading="lazy" decoding="async" style="object-position:60% 0" alt="Fachada da Casa Chinesa com toldos amarelos na Rua Sá da Bandeira" data-i18n-alt="facadeAlt"></div>
+        </figure>
+        <div class="pane info">
+          <h2 id="h-visit" data-i18n="visitH">Passe pelo balcão.</h2>
+          <address class="addr">Rua Sá da Bandeira, 343<br>4000-435 Porto</address>
+          <table class="hours">
+            <caption class="sr" data-i18n="hoursCap">Horário</caption>
+            <tbody>
+              <tr data-days="1,2,3,4,5"><td data-i18n="wk">Segunda a sexta</td><td>9:00–19:00</td></tr>
+              <tr data-days="6"><td data-i18n="sat">Sábado</td><td>9:00–13:00</td></tr>
+              <tr data-days="0"><td data-i18n="sun">Domingo</td><td data-i18n="closed">Fechado</td></tr>
+            </tbody>
+          </table>
+          <div class="contacts">
+            <a href="tel:+351222006578">222 006 578</a>
+            <a href="tel:+351917595060">917 595 060</a>
+            <a href="mailto:casachinesa@sapo.pt">casachinesa@sapo.pt</a>
+          </div>
+          <p class="note" data-i18n="delivery">Também entregamos ao domicílio. Ligue e combine connosco.</p>
+          <div class="ctas">
+            <a class="btn btn--main" href="tel:+351222006578"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.4a12 12 0 0 0 7 7l1.4-2.3L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span data-i18n="call">Ligar</span></a>
+            <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Chinesa+Rua+S%C3%A1+da+Bandeira+343+Porto" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-i18n="map">Abrir no mapa</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Casa Chinesa</b></p>
+    <p>Rua Sá da Bandeira, 343, Porto<br><span data-i18n="footHours">Seg–Sex 9:00–19:00 · Sáb 9:00–13:00</span></p>
+    <p><a href="tel:+351222006578">222 006 578</a> · <a href="mailto:casachinesa@sapo.pt">casachinesa@sapo.pt</a><br><a href="https://www.facebook.com/pages/Casa-Chinesa/199702556731466" target="_blank" rel="noopener">Facebook</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+
+  var EN = {
+    title:'Casa Chinesa · Natural grocery in downtown Porto',
+    desc:'Grocery on Rua Sá da Bandeira 343, Porto, since 1938. Pulses, nuts, spices, teas, salt cod, cheese and macrobiotic and gluten-free foods, sold by weight.',
+    skip:'Skip to content', navLabel:'Main', langLabel:'Language',
+    navGoods:'Products', navVisit:'Visit', call:'Call', callAria:'Call Casa Chinesa', callNum:'Call 222 006 578', directions:'Get directions',
+    heroAlt:'Baskets of carob, ginger, tamarind, yam and chillies at the door of Casa Chinesa',
+    h1:'The natural grocery of downtown Porto.',
+    heroP:'Pulses, nuts, spices, teas and macrobiotic and gluten-free foods, sold loose, in exactly the amount you want.',
+    statusDefault:'Mon–Fri 9:00–19:00 · Sat 9:00–13:00',
+    goodsH:'Weighed at the counter, to your measure.',
+    legAlt:'Open sacks of lentils, beans and grains sold loose', legH:'Pulses and flours', legP:'Chickpeas, beans, lentils and flours from all over Portugal.',
+    nutsAlt:'Mixed almonds, cashews, walnuts and hazelnuts', nutsH:'Nuts and honey',
+    teaAlt:'Spoons holding different loose-leaf teas', teaH:'Tea and coffee',
+    codAlt:'Dried salt cod stacked in the Casa Chinesa window', codH:'Salt cod',
+    cheeseAlt:'Wheels and wedges of cured cheese', cheeseH:'Mountain cheese and smoked goods',
+    storyAlt:'The Casa Chinesa counter with its wall of spice and tea jars',
+    storyH:'Next to the Bolhão market since 1938.',
+    storyP:'Founded by Joaquim Mota Cardoso and Fernando Carneiro da Silva, the shop is still run by their heirs.',
+    facadeAlt:'Casa Chinesa shopfront with yellow awnings on Rua Sá da Bandeira',
+    visitH:'Come by the counter.', hoursCap:'Opening hours', wk:'Monday to Friday', sat:'Saturday', sun:'Sunday', closed:'Closed',
+    delivery:'We also deliver to your home. Call us to arrange it.', map:'Open in maps',
+    footHours:'Mon–Fri 9:00–19:00 · Sat 9:00–13:00'
+  };
+  var PT = {title:document.title, desc:document.querySelector('meta[name=description]').content};
+  var DAYS = {pt:['domingo','segunda','terça','quarta','quinta','sexta','sábado'], en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']};
+  var lang = 'pt';
+
+  // capture the Portuguese originals once so switching back restores them
+  document.querySelectorAll('[data-i18n]').forEach(function(el){ PT[el.dataset.i18n] = el.textContent; });
+  document.querySelectorAll('[data-i18n-alt]').forEach(function(el){ PT[el.dataset.i18nAlt] = el.alt; });
+  document.querySelectorAll('[data-i18n-aria]').forEach(function(el){ PT[el.dataset.i18nAria] = el.getAttribute('aria-label'); });
+
+  function t(k){ return (lang === 'en' ? EN : PT)[k]; }
+
+  function setLang(l){
+    lang = l === 'en' ? 'en' : 'pt';
+    document.documentElement.lang = lang === 'en' ? 'en' : 'pt-PT';
+    document.title = t('title');
+    document.querySelector('meta[name=description]').content = t('desc');
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ el.textContent = t(el.dataset.i18n); });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el){ el.alt = t(el.dataset.i18nAlt); });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){ el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    renderStatus();
+  }
+
+  // opening hours, minutes from midnight, by weekday (0 = Sunday), Europe/Lisbon time
+  var HOURS = {0:null, 1:[540,1140], 2:[540,1140], 3:[540,1140], 4:[540,1140], 5:[540,1140], 6:[540,780]};
+  function fmt(m){ return Math.floor(m/60) + ':' + String(m%60).padStart(2,'0'); }
+
+  // pure: returns {open, text} for a weekday and minute of day
+  function status(day, min, l){
+    var h = HOURS[day];
+    if (h && min >= h[0] && min < h[1]) {
+      return {open:true, text: l === 'en' ? 'Open now · closes at ' + fmt(h[1]) : 'Aberto agora · fecha às ' + fmt(h[1])};
+    }
+    if (h && min < h[0]) {
+      return {open:false, text: l === 'en' ? 'Closed · opens today at ' + fmt(h[0]) : 'Fechado · abre hoje às ' + fmt(h[0])};
+    }
+    for (var i = 1; i <= 7; i++) {
+      var d = (day + i) % 7;
+      if (HOURS[d]) {
+        var when = i === 1 ? (l === 'en' ? 'tomorrow' : 'amanhã') : (l === 'en' ? 'on ' + DAYS.en[d] : (d === 6 ? 'no ' : 'na ') + DAYS.pt[d]);
+        return {open:false, text: l === 'en' ? 'Closed · opens ' + when + ' at ' + fmt(HOURS[d][0]) : 'Fechado · abre ' + when + ' às ' + fmt(HOURS[d][0])};
+      }
+    }
+  }
+
+  // self-check of the hours logic
+  console.assert(status(1, 600, 'pt').open === true, 'Mon 10:00 open');
+  console.assert(status(6, 800, 'pt').text === 'Fechado · abre na segunda às 9:00', 'Sat 13:20 -> Monday');
+  console.assert(status(0, 600, 'en').text === 'Closed · opens tomorrow at 9:00', 'Sun -> tomorrow');
+  console.assert(status(5, 1140, 'pt').text === 'Fechado · abre amanhã às 9:00', 'Fri 19:00 -> tomorrow');
+  console.assert(status(2, 480, 'en').text === 'Closed · opens today at 9:00', 'Tue 8:00 -> today');
+
+  function lisbonNow(){
+    try {
+      var p = new Intl.DateTimeFormat('en-GB', {timeZone:'Europe/Lisbon', weekday:'short', hour:'2-digit', minute:'2-digit', hourCycle:'h23'}).formatToParts(new Date());
+      var o = {}; p.forEach(function(x){ o[x.type] = x.value; });
+      return {day:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday), min:+o.hour * 60 + +o.minute};
+    } catch (e) { return null; }
+  }
+
+  function renderStatus(){
+    var now = lisbonNow(), box = document.querySelector('.status');
+    if (!now || now.day < 0) return;
+    var s = status(now.day, now.min, lang);
+    document.getElementById('status-now').textContent = s.text;
+    box.dataset.open = s.open ? '1' : '0';
+    document.querySelectorAll('.hours tr').forEach(function(tr){
+      tr.classList.toggle('today', tr.dataset.days.split(',').indexOf(String(now.day)) > -1);
+    });
+  }
+
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){
+      setLang(b.dataset.lang);
+      try { localStorage.setItem('cc-lang', lang); } catch (e) {}
+    });
+  });
+
+  var saved = null;
+  try { saved = localStorage.getItem('cc-lang'); } catch (e) {}
+  if (saved === 'en') setLang('en'); else renderStatus();
+  setInterval(renderStatus, 60000);
+
+  // photos emerge once when they enter the viewport
+  var panes = document.querySelectorAll('.emerge');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px'});
+    panes.forEach(function(p){ io.observe(p); });
+  } else {
+    panes.forEach(function(p){ p.classList.add('in'); });
+  }
+
+  // header Call hides while an in-page Call + Directions pair is visible, so at most two CTAs show at once
+  var topCall = document.querySelector('.top-call');
+  if ('IntersectionObserver' in window && topCall) {
+    var seen = new Set();
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ e.isIntersecting ? seen.add(e.target) : seen.delete(e.target); });
+      topCall.classList.toggle('is-off', seen.size > 0);
+    });
+    document.querySelectorAll('main .ctas').forEach(function(c){ cio.observe(c); });
+  }
+})();
+</script>
+</body>
+</html>
