@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Pérola do Bolhão · Mercearia na Rua Formosa, Porto, desde 1917</title>
+<meta name="description" content="Mercearia tradicional na Rua Formosa, 279, em frente ao Mercado do Bolhão. Queijos, presunto, fumeiro, vinho do Porto e frutos secos desde 1917.">
+<meta name="theme-color" content="#f8f7f3">
+<link rel="preload" as="image" href="assets/img/balcao-fumeiro-900.webp" imagesrcset="assets/img/balcao-fumeiro-900.webp 900w, assets/img/balcao-fumeiro-1600.webp 1600w" imagesizes="(min-width: 900px) 56vw, 100vw" fetchpriority="high">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"GroceryStore","name":"A Pérola do Bolhão","foundingDate":"1917","telephone":"+351222004009","email":"peroladobolhaolda@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua Formosa, 279","postalCode":"4000-252","addressLocality":"Porto","addressCountry":"PT"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"14:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}]}
+</script>
+<script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion');</script>
+<style>
+/* Fonts: Bricolage Grotesque (variable opsz/wdth/wght) and Patrick Hand SC, both SIL OFL, vendored from Google Fonts. */
+@font-face{font-family:"Bricolage";font-style:normal;font-weight:200 800;font-stretch:75% 100%;font-display:swap;src:url("assets/fonts/bricolage-latin.woff2") format("woff2")}
+@font-face{font-family:"Marker";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/patrick-hand-sc-latin.woff2") format("woff2")}
+
+:root{
+  /* White card stock, felt-tip ink, the shop's lettering red (muted) for the action, tile green for hairlines. */
+  --ground:   oklch(0.975 0.004 90);
+  --card:     oklch(0.993 0.002 90);
+  --ink:      oklch(0.24 0.01 40);
+  --ink-2:    oklch(0.45 0.01 45);
+  --rule:     oklch(0.885 0.006 90);
+  --marker:   oklch(0.50 0.084 27);
+  --marker-2: oklch(0.44 0.079 27);
+  --tile:     oklch(0.55 0.038 165);
+  --tile-wash:oklch(0.962 0.011 165);
+  --tile-rule:oklch(0.87 0.019 165);
+
+  --sans: "Bricolage", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --hand: "Marker", "Segoe Print", "Bradley Hand", cursive;
+
+  --wrap: 1280px;
+  --gutter: clamp(20px, 5vw, 72px);
+  --section: clamp(104px, 14vh, 176px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  color-scheme: light;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px;scrollbar-color:var(--rule) var(--ground)}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);font-variation-settings:"opsz" 14;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:var(--tile)}
+a:hover{text-decoration-color:currentColor}
+::selection{background:color-mix(in oklch, var(--marker) 22%, transparent);color:var(--ink)}
+:focus-visible{outline:2px solid var(--marker);outline-offset:3px;border-radius:2px}
+h1,h2,h3{margin:0;font-weight:640;font-stretch:84%;font-variation-settings:"opsz" 96;letter-spacing:-.022em;line-height:1;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+figure{margin:0}
+
+.wrap{width:min(100% - 2*var(--gutter), var(--wrap));margin-inline:auto}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--ink);color:var(--card);padding:10px 16px;text-decoration:none}
+.skip:focus{top:12px}
+.ico{width:18px;height:18px;flex:none}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in oklch, var(--ground) 92%, transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.is-stuck{border-bottom-color:var(--rule)}
+.top__in{display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);height:68px}
+.brand{margin-right:auto;display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-weight:650;font-stretch:80%;font-variation-settings:"opsz" 40;font-size:1.25rem;letter-spacing:-.01em;line-height:1;white-space:nowrap}
+.nav{display:none;gap:30px}
+.nav a{text-decoration:none;font-size:.95rem;color:var(--ink-2);padding:6px 0;background:linear-gradient(var(--marker),var(--marker)) 0 100%/0 1px no-repeat;transition:background-size .45s var(--ease),color .2s}
+.nav a:hover{color:var(--ink);background-size:100% 1px}
+.lang{display:inline-flex;align-items:center;font-size:.8rem;font-weight:600;letter-spacing:.04em}
+.lang button{all:unset;cursor:pointer;display:inline-grid;place-items:center;min-width:32px;min-height:44px;padding:0 6px;box-sizing:border-box;color:var(--ink-2);border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.lang button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--marker)}
+.lang button:hover{color:var(--ink)}
+.lang button:focus-visible{outline:2px solid var(--marker);outline-offset:2px}
+.lang span{color:var(--rule)}
+.top .lang{order:2}
+.top__cta{order:1;display:flex;align-items:center;gap:8px;transition:opacity .3s var(--ease),visibility .3s}
+.top.is-quiet .top__cta{opacity:0;visibility:hidden}
+.top__call{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid color-mix(in oklch, var(--ink) 28%, transparent);color:var(--ink);transition:border-color .2s}
+.top__call:hover{border-color:var(--ink)}
+.top .btn{min-height:44px;padding:0 18px;font-size:.92rem}
+.top .btn .ico{display:none}
+@media (max-width:519px){.top .btn{width:44px;padding:0;border-radius:50%}.top .btn .ico{display:block}.top .btn span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}}
+@media (min-width:860px){.nav{display:flex}}
+
+/* ---------- buttons ---------- */
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:6px;font:600 1rem/1 var(--sans);font-stretch:92%;text-decoration:none;white-space:nowrap;transition:background-color .25s var(--ease),border-color .25s var(--ease),transform .35s var(--ease)}
+.btn--go{background:var(--marker);color:var(--card);border:1px solid var(--marker)}
+.btn--go:hover{background:var(--marker-2);border-color:var(--marker-2);transform:translateY(-1px)}
+.btn--line{color:var(--ink);border:1px solid color-mix(in oklch, var(--ink) 32%, transparent)}
+.btn--line:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(8px,2vh,32px) clamp(56px,8vh,96px)}
+.hero__grid{display:grid;gap:30px}
+.hero__photo{position:relative;overflow:hidden;aspect-ratio:4/3;max-height:48svh;background:var(--rule);border-radius:4px}
+.hero__photo img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:500;color:var(--ink-2);margin-bottom:16px}
+.hero h1{font-size:clamp(2.6rem,6.6vw,5.4rem)}
+.hero__lede{margin-top:clamp(18px,3vh,26px);font-size:clamp(1.0625rem,1.3vw,1.22rem);color:var(--ink-2);max-width:36ch}
+.hero .actions{margin-top:clamp(26px,4vh,38px)}
+.hero__hours{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:12px;font-size:.95rem;color:var(--ink-2)}
+@media (min-width:900px){
+  .hero{padding-top:clamp(24px,5vh,56px)}
+  .hero__grid{grid-template-columns:repeat(12,1fr);align-items:center;gap:clamp(28px,4vw,56px)}
+  .hero__copy{grid-column:1 / span 5;order:-1}
+  .hero__photo{grid-column:6 / span 7;aspect-ratio:5/6;max-height:min(80svh,760px)}
+  .hero h1{max-width:10ch}
+  .badge{margin-bottom:clamp(18px,3vh,30px)}
+}
+
+/* ---------- section scaffolding ---------- */
+.section{padding-block:var(--section)}
+.h2{font-size:clamp(2.1rem,4.6vw,3.7rem);max-width:14ch}
+.lede{margin-top:22px;color:var(--ink-2);max-width:40ch;font-size:1.0625rem}
+
+/* ---------- products ---------- */
+.products{padding-top:clamp(40px,6vh,72px)}
+.products .h2{margin-bottom:clamp(40px,6vh,72px)}
+.shelf{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(36px,4vw,56px) clamp(18px,2.6vw,40px)}
+.item{position:relative;display:grid;gap:12px;align-content:start}
+.item:first-child{grid-column:1 / -1}
+.item__photo{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--rule);border-radius:4px}
+.item:first-child .item__photo{aspect-ratio:4/3}
+.item__photo img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.item:first-child .item__photo img{object-position:50% 62%}
+.item:hover .item__photo img{transform:scale(1.035)}
+/* the counter card: white stock, a felt-tip red border, the name in marker caps */
+.tag{position:absolute;left:clamp(8px,1.4vw,16px);bottom:clamp(8px,1.4vw,16px);max-width:calc(100% - 2*clamp(8px,1.4vw,16px));padding:6px 12px 5px;background:var(--card);border:2px solid var(--marker);border-radius:2px;outline:1px solid var(--card);box-shadow:0 2px 8px -2px oklch(0.2 0.02 40 / .28);font:400 clamp(1.05rem,1.6vw,1.4rem)/1.05 var(--hand);color:var(--ink);letter-spacing:.01em;transform:rotate(var(--r,-1.6deg));transition:transform .5s var(--ease)}
+.item:nth-child(2n) .tag{--r:1.2deg}.item:nth-child(3n) .tag{--r:-.7deg}
+.item:hover .tag{transform:rotate(0deg) translateY(-2px)}
+.item__line{font-size:.98rem;color:var(--ink-2);max-width:32ch}
+@media (min-width:900px){
+  .shelf{grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto}
+  .item:first-child{grid-column:1;grid-row:1 / span 2}
+  .item:first-child .item__photo{aspect-ratio:auto;height:100%;min-height:0}
+  .item:first-child{grid-template-rows:1fr auto}
+  .tag{font-size:1.35rem}
+}
+
+/* ---------- story (the one tinted band) ---------- */
+.story{background:var(--tile-wash)}
+.story__grid{display:grid;gap:clamp(36px,5vw,72px);align-items:center}
+.story__photo{overflow:hidden;aspect-ratio:1;border-radius:4px;background:var(--tile-rule)}
+.story__photo img{width:100%;height:100%;object-fit:cover}
+@media (min-width:900px){
+  .story__grid{grid-template-columns:repeat(12,1fr)}
+  .story__photo{grid-column:1 / span 6}
+  .story__copy{grid-column:8 / span 5}
+}
+
+/* ---------- visit + footer ---------- */
+.visit{padding-bottom:0}
+.visit__grid{display:grid;gap:clamp(40px,5vw,72px)}
+.visit__photo{overflow:hidden;aspect-ratio:3/2;border-radius:4px;background:var(--rule)}
+.visit__photo img{width:100%;height:100%;object-fit:cover}
+.addr{margin-top:26px;font-size:1.125rem;font-style:normal;line-height:1.5}
+.hours{margin:28px 0 0;display:grid;grid-template-columns:auto 1fr;gap:0;max-width:400px;border-top:1px solid var(--tile)}
+.hours dt,.hours dd{margin:0;padding:12px 0;border-bottom:1px solid var(--rule)}
+.hours dd{padding-left:24px;text-align:right;font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+.hours dd.closed{color:var(--ink-2)}
+.note{margin-top:14px;font-size:.9rem;color:var(--ink-2);max-width:44ch}
+.visit .actions{margin-top:34px}
+.contacts{display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:22px;font-size:1rem}
+.contacts a{display:inline-flex;align-items:center;gap:8px;min-height:44px}
+.contacts .ico{width:17px;height:17px;color:var(--tile)}
+@media (min-width:900px){
+  .visit__grid{grid-template-columns:repeat(12,1fr);align-items:center}
+  .visit__photo{grid-column:1 / span 6;aspect-ratio:4/5}
+  .visit__photo img{object-position:30% 50%}
+  .visit__copy{grid-column:8 / span 5}
+}
+.foot{margin-top:var(--section);border-top:1px solid var(--rule)}
+.foot__in{display:flex;justify-content:flex-end;align-items:center;padding-block:18px;font-size:.88rem;color:var(--ink-2)}
+
+/* ---------- motion (only when allowed; content is visible by default) ---------- */
+.motion .hero__photo img{animation:settle 1.6s var(--ease) both}
+@keyframes settle{from{transform:scale(1.06)}to{transform:scale(1)}}
+.motion .reveal{clip-path:inset(0 0 0 0 round 4px);transition:clip-path 1.05s var(--ease)}
+.motion .reveal img{transition:transform 1.3s var(--ease)}
+.motion .reveal.is-pending{clip-path:inset(10% 0 0 0 round 4px)}
+.motion .reveal.is-pending img{transform:scale(1.05)}
+.motion .item .tag{transition:transform .5s var(--ease),opacity .6s var(--ease) .25s,translate .6s var(--ease) .25s}
+.motion .item:has(.is-pending) .tag{opacity:0;translate:0 10px}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover,.item:hover .item__photo img{transition:none;transform:none}
+  .tag,.item:hover .tag{transition:none;transform:rotate(var(--r,-1.6deg))}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Saltar para o conteúdo</a>
+
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#main">A Pérola do Bolhão</a>
+    <nav class="nav" aria-label="Principal" data-i18n-aria="navLabel">
+      <a href="#produtos" data-i18n="navProducts">Produtos</a>
+      <a href="#casa" data-i18n="navHouse">A casa</a>
+      <a href="#visitar" data-i18n="navVisit">Visitar</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="pt" aria-pressed="true" lang="pt-PT">PT</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+    <div class="top__cta">
+      <a class="top__call" href="tel:+351222004009" aria-label="Ligar para a loja" data-i18n-aria="callLabel"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.2 1.5a11.5 11.5 0 0 0 7.2 7.2l1.5-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg></a>
+      <a class="btn btn--go" href="https://www.google.com/maps/dir/?api=1&amp;destination=A%20P%C3%A9rola%20do%20Bolh%C3%A3o%2C%20Rua%20Formosa%20279%2C%204000-252%20Porto" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span data-i18n="ctaDir">Como chegar</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <figure class="hero__photo">
+        <img src="assets/img/balcao-fumeiro-900.webp" srcset="assets/img/balcao-fumeiro-900.webp 900w, assets/img/balcao-fumeiro-1600.webp 1600w" sizes="(min-width: 900px) 56vw, 100vw" width="1600" height="1066" fetchpriority="high" decoding="async" alt="O balcão da Pérola do Bolhão, com fumeiro pendurado, vitrines de enchidos e prateleiras de vinho do Porto" data-i18n-alt="altHero">
+      </figure>
+      <div class="hero__copy">
+        <p class="badge"><span data-i18n="badge">Loja Porto de Tradição</span>
+        </p>
+        <h1 id="hero-title" data-i18n="h1">A mercearia da Rua Formosa, desde 1917.</h1>
+        <p class="hero__lede" data-i18n="lede">Queijos, presunto, fumeiro, vinho do Porto e frutos secos, mesmo em frente ao Mercado do Bolhão.</p>
+        <div class="actions">
+          <a class="btn btn--go" href="https://www.google.com/maps/dir/?api=1&amp;destination=A%20P%C3%A9rola%20do%20Bolh%C3%A3o%2C%20Rua%20Formosa%20279%2C%204000-252%20Porto" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            <span data-i18n="ctaDir">Como chegar</span>
+          </a>
+          <a class="btn btn--line" href="tel:+351222004009">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.2 1.5a11.5 11.5 0 0 0 7.2 7.2l1.5-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg>
+            <span data-i18n="ctaCall">Ligar</span>
+          </a>
+        </div>
+        <a class="hero__hours" href="#visitar">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+          <span data-i18n="heroHours">Segunda a sábado, a partir das 9:00</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section products" id="produtos" aria-labelledby="products-title">
+    <div class="wrap">
+      <h2 class="h2" id="products-title" data-i18n="productsTitle">Do balcão para a sua mesa.</h2>
+      <ul class="shelf">
+        <li class="item">
+          <figure class="item__photo reveal"><img src="assets/img/presunto-alheiras-640.webp" srcset="assets/img/presunto-alheiras-640.webp 640w, assets/img/presunto-alheiras-1024.webp 1024w" sizes="(min-width: 900px) 36vw, 100vw" width="1024" height="1280" loading="lazy" decoding="async" alt="Vitrine do balcão com alheiras de Mirandela, presunto e bacon" data-i18n-alt="altHam"><figcaption class="tag" data-i18n="t1">Presunto e enchidos</figcaption></figure>
+          <p class="item__line" data-i18n="l1">Com alheiras de Mirandela e fumeiro regional.</p>
+        </li>
+        <li class="item">
+          <figure class="item__photo reveal"><img src="assets/img/queijos-600.webp" srcset="assets/img/queijos-600.webp 600w, assets/img/queijos-1000.webp 1000w" sizes="(min-width: 900px) 26vw, 46vw" width="1000" height="1250" loading="lazy" decoding="async" alt="Pequenos queijos de leite de ovelha em cura" data-i18n-alt="altCheese"><figcaption class="tag" data-i18n="t2">Queijos regionais</figcaption></figure>
+        </li>
+        <li class="item">
+          <figure class="item__photo reveal"><img src="assets/img/vinho-do-porto-560.webp" srcset="assets/img/vinho-do-porto-560.webp 560w, assets/img/vinho-do-porto-854.webp 854w" sizes="(min-width: 900px) 26vw, 46vw" width="854" height="1066" loading="lazy" decoding="async" alt="Garrafas de vinho do Porto alinhadas numa prateleira" data-i18n-alt="altPort"><figcaption class="tag" data-i18n="t3">Vinho do Porto</figcaption></figure>
+        </li>
+        <li class="item">
+          <figure class="item__photo reveal"><img src="assets/img/frutos-secos-600.webp" srcset="assets/img/frutos-secos-600.webp 600w, assets/img/frutos-secos-1000.webp 1000w" sizes="(min-width: 900px) 26vw, 46vw" width="1000" height="1250" loading="lazy" decoding="async" alt="Amêndoas, nozes, cajus e avelãs misturados" data-i18n-alt="altNuts"><figcaption class="tag" data-i18n="t4">Frutos secos</figcaption></figure>
+          <p class="item__line" data-i18n="l4">A granel, vendidos ao peso.</p>
+        </li>
+        <li class="item">
+          <figure class="item__photo reveal"><img src="assets/img/despensa-480.webp" srcset="assets/img/despensa-480.webp 480w, assets/img/despensa-666.webp 666w" sizes="(min-width: 900px) 26vw, 46vw" width="666" height="832" loading="lazy" decoding="async" alt="Prateleiras da loja com compotas, conservas, azeites e garrafas" data-i18n-alt="altPantry"><figcaption class="tag" data-i18n="t5">Azeite, compotas e conservas</figcaption></figure>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section story" id="casa" aria-labelledby="story-title">
+    <div class="wrap story__grid">
+      <figure class="story__photo reveal"><img src="assets/img/fachada-560.webp" srcset="assets/img/fachada-560.webp 560w, assets/img/fachada-800.webp 800w" sizes="(min-width: 900px) 44vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="A fachada Arte Nova da Pérola do Bolhão, em azulejo, com os painéis Chá e Café e duas figuras femininas pintadas" data-i18n-alt="altFacade"></figure>
+      <div class="story__copy">
+        <h2 class="h2" id="story-title" data-i18n="storyTitle">A mesma casa, há mais de cem anos.</h2>
+        <p class="lede" data-i18n="storyLede">António Rodrigues Reis abriu-a para vender chá, café e especiarias. Os azulejos Arte Nova da fachada ainda o contam, e a loja continua na família.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visit" id="visitar" aria-labelledby="visit-title">
+    <div class="wrap visit__grid">
+      <figure class="visit__photo reveal"><img src="assets/img/loja-interior-900.webp" srcset="assets/img/loja-interior-900.webp 900w, assets/img/loja-interior-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 100vw" width="1600" height="1066" loading="lazy" decoding="async" alt="O interior da loja, com a balança no balcão, vitrines de queijo e paredes de garrafas e frascos" data-i18n-alt="altInside"></figure>
+      <div class="visit__copy">
+        <h2 class="h2" id="visit-title" data-i18n="visitTitle">Venha escolher ao balcão.</h2>
+        <address class="addr">Rua Formosa, 279<br>4000-252 Porto</address>
+        <dl class="hours" aria-label="Horário" data-i18n-aria="hoursLabel">
+          <dt data-i18n="hWeek">Segunda a sexta</dt><dd>9:00–13:00 · 14:00–19:00</dd>
+          <dt data-i18n="hSat">Sábado</dt><dd>9:00–13:00</dd>
+          <dt data-i18n="hSun">Domingo</dt><dd class="closed" data-i18n="closed">Fechado</dd>
+        </dl>
+        <p class="note" data-i18n="note">Fecha a 1 e 8 de dezembro, na Sexta-feira Santa e na Páscoa.</p>
+        <div class="actions">
+          <a class="btn btn--go" href="https://www.google.com/maps/dir/?api=1&amp;destination=A%20P%C3%A9rola%20do%20Bolh%C3%A3o%2C%20Rua%20Formosa%20279%2C%204000-252%20Porto" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            <span data-i18n="ctaDir">Como chegar</span>
+          </a>
+          <a class="btn btn--line" href="tel:+351222004009">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.2 1.5a11.5 11.5 0 0 0 7.2 7.2l1.5-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg>
+            <span>222 004 009</span>
+          </a>
+        </div>
+        <ul class="contacts">
+          <li><a href="mailto:peroladobolhaolda@gmail.com"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.8"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>peroladobolhaolda@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <footer class="foot">
+      <div class="wrap foot__in">
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="pt" aria-pressed="true" lang="pt-PT">PT</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement;
+
+  /* ---------- language ---------- */
+  var EN={
+    title:'A Pérola do Bolhão · Grocery on Rua Formosa, Porto, since 1917',
+    desc:'Traditional grocery at Rua Formosa 279, opposite the Bolhão market. Cheese, cured ham, smoked sausages, Port wine and dried fruit since 1917.',
+    skip:'Skip to content',navLabel:'Main',navProducts:'Products',navHouse:'The shop',navVisit:'Visit',callLabel:'Call the shop',
+    ctaDir:'Get directions',ctaCall:'Call',
+    badge:'Porto de Tradição shop',
+    h1:'The grocery on Rua Formosa, since 1917.',
+    lede:'Cheese, cured ham, smoked sausages, Port wine and dried fruit, right opposite the Bolhão market.',
+    heroHours:'Monday to Saturday, from 9:00',
+    productsTitle:'From our counter to your table.',
+    t1:'Ham and sausages',l1:'Including alheiras from Mirandela and regional smoked meats.',
+    t2:'Regional cheese',
+    t3:'Port wine',
+    t4:'Dried fruit and nuts',l4:'Sold loose, by weight.',
+    t5:'Olive oil, jams and tinned fish',
+    storyTitle:'The same shop for over a hundred years.',
+    storyLede:'António Rodrigues Reis opened it to sell tea, coffee and spices. The Art Nouveau tiles on the facade still tell that story, and the shop is still in the family.',
+    visitTitle:'Come and choose at the counter.',hoursLabel:'Opening hours',hWeek:'Monday to Friday',hSat:'Saturday',hSun:'Sunday',closed:'Closed',
+    note:'Closed on 1 and 8 December, Good Friday and Easter.',
+    altHero:'The counter at A Pérola do Bolhão, with smoked sausages hanging, cured meat cases and shelves of Port wine',
+    altHam:'Counter case with alheira sausages from Mirandela, cured ham and bacon',
+    altCheese:'Small sheep’s milk cheeses ageing',
+    altPort:'Bottles of Port wine lined up on a shelf',
+    altNuts:'Almonds, walnuts, cashews and hazelnuts mixed together',
+    altPantry:'Shop shelves with jams, tinned fish, olive oils and bottles',
+    altFacade:'The Art Nouveau tiled facade of A Pérola do Bolhão, with the Chá and Café panels and two painted women',
+    altInside:'Inside the shop, with the scale on the counter, cheese cases and walls of bottles and jars'
+  };
+  var PT=null;
+  function snapshot(){
+    PT={title:document.title,desc:document.querySelector('meta[name=description]').content};
+    document.querySelectorAll('[data-i18n]').forEach(function(el){PT[el.dataset.i18n]=el.textContent});
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el){PT[el.dataset.i18nAlt]=el.alt});
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){PT[el.dataset.i18nAria]=el.getAttribute('aria-label')});
+  }
+  function setLang(lang){
+    if(!PT)snapshot();
+    var d=lang==='en'?EN:PT;
+    root.lang=lang==='en'?'en':'pt-PT';
+    document.title=d.title;
+    document.querySelector('meta[name=description]').content=d.desc;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){var v=d[el.dataset.i18n];if(v!=null)el.textContent=v});
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el){var v=d[el.dataset.i18nAlt];if(v!=null)el.alt=v});
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){var v=d[el.dataset.i18nAria];if(v!=null)el.setAttribute('aria-label',v)});
+    document.querySelectorAll('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===lang))});
+    try{localStorage.setItem('perola-lang',lang)}catch(e){}
+  }
+  document.querySelectorAll('[data-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang)})});
+  try{if(localStorage.getItem('perola-lang')==='en')setLang('en')}catch(e){}
+
+  /* ---------- header hairline ---------- */
+  var top=document.getElementById('top');
+  function onScroll(){top.classList.toggle('is-stuck',scrollY>8)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* ---------- header actions step aside while a section's own actions are on screen (max two CTAs in view) ---------- */
+  if('IntersectionObserver' in window){
+    var seen=new Set();
+    var qo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)seen.add(e.target);else seen.delete(e.target)});top.classList.toggle('is-quiet',seen.size>0)},{rootMargin:'-68px 0px 0px 0px'});
+    document.querySelectorAll('.hero .actions,.visit .actions').forEach(function(el){qo.observe(el)});
+  }
+
+  if(!root.classList.contains('motion')||!('IntersectionObserver' in window))return;
+
+  /* ---------- reveals ---------- */
+  var items=[].slice.call(document.querySelectorAll('.reveal'));
+  items.forEach(function(el){if(el.getBoundingClientRect().top>innerHeight)el.classList.add('is-pending')});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('is-pending');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.06});
+  items.forEach(function(el){if(el.classList.contains('is-pending'))io.observe(el)});
+  /* failsafe: nothing stays hidden */
+  setTimeout(function(){items.forEach(function(el){el.classList.remove('is-pending')})},6000);})();
+</script>
+</body>
+</html>
