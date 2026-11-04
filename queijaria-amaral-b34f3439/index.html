@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Queijaria Amaral · Queijaria na Baixa do Porto desde 1928</title>
+<meta name="description" content="A queijaria mais antiga do Porto. Queijo da Serra da Estrela, cerca de cinquenta queijos, presunto e fumeiro. Rua de Santo Ildefonso, 190.">
+<meta name="theme-color" content="#f3f2ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&amp;family=Gloock&amp;display=swap">
+<link rel="preload" as="image" href="assets/img/balcao-roda-900.webp" imagesrcset="assets/img/balcao-roda-900.webp 900w, assets/img/balcao-roda-1600.webp 1600w" imagesizes="(min-width: 900px) 58vw, 100vw" fetchpriority="high">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%2395544b' stroke-width='2'/%3E%3Ctext x='16' y='21' font-family='Georgia,serif' font-size='14' text-anchor='middle' fill='%2395544b'%3EA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Queijaria Amaral","foundingDate":"1928","telephone":"+351222004162","email":"queijariaamaralporto@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua de Santo Ildefonso, 190","postalCode":"4000-507","addressLocality":"Porto","addressCountry":"PT"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"}],"sameAs":["https://www.facebook.com/queijaria.amaral"]}
+</script>
+<style>
+:root{
+  /* Palette: greaseproof paper, bottle-green stamp ink (the fascia), one muted sign red. Chroma cut ~25% for a calmer page. */
+  --paper:   oklch(0.962 0.005 95);
+  --paper-2: oklch(0.938 0.007 100);
+  --slip:    oklch(0.992 0.003 95);
+  --ink:     oklch(0.25 0.017 168);
+  --ink-2:   oklch(0.44 0.015 165);
+  --green:   oklch(0.40 0.039 170);
+  --green-d: oklch(0.31 0.034 170);
+  --red:     oklch(0.52 0.089 29);
+  --rule:    oklch(0.855 0.008 110);
+
+  --display: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --text: "Archivo", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mark: "Gloock", "Iowan Old Style", Georgia, serif;
+
+  --wrap: 1240px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --section: clamp(96px, 12vh, 160px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  color-scheme: light;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px;scrollbar-color:var(--rule) var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--text);font-stretch:100%;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+::selection{background:color-mix(in oklch, var(--green) 22%, transparent);color:var(--ink)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:620;font-stretch:116%;margin:0;letter-spacing:-.025em;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:min(100% - 2*var(--gutter), var(--wrap));margin-inline:auto}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--ink);color:var(--slip);padding:10px 16px;text-decoration:none}
+.skip:focus{top:12px}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in oklch, var(--paper) 90%, transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.is-stuck{border-bottom-color:var(--rule)}
+.top__in{display:flex;align-items:center;gap:28px;height:66px}
+.brand{font-family:var(--mark);font-size:1.4rem;line-height:1;letter-spacing:-.005em;text-decoration:none;margin-right:auto;color:var(--green-d)}
+.nav{display:none;gap:28px}
+.nav a{text-decoration:none;font-size:.95rem;color:var(--ink-2);padding:6px 0;background:linear-gradient(var(--red),var(--red)) 0 100%/0 1px no-repeat;transition:background-size .4s var(--ease),color .2s}
+.nav a:hover{color:var(--ink);background-size:100% 1px}
+.lang{display:inline-flex;font-size:.82rem;font-weight:600;letter-spacing:.04em;border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+.lang button{all:unset;cursor:pointer;padding:6px 10px;color:var(--ink-2);transition:background .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--green-d);color:var(--slip)}
+.lang button:not([aria-pressed="true"]):hover{color:var(--ink);background:var(--paper-2)}
+.lang button:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+@media (min-width:760px){.nav{display:flex}}
+
+/* ---------- buttons ---------- */
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:2px;font:600 1rem/1 var(--text);font-stretch:104%;text-decoration:none;transition:background-color .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn--solid{background:var(--green);color:var(--slip);border:1px solid var(--green)}
+.btn--solid:hover{background:var(--green-d);border-color:var(--green-d)}
+.btn--line{border:1px solid color-mix(in oklch, var(--ink) 38%, transparent);color:var(--ink)}
+.btn--line:hover{border-color:var(--ink);background:var(--slip)}
+.btn:active{transform:translateY(1px)}
+.num{font-variant-numeric:tabular-nums}
+@media (max-width:400px){.btn{padding:0 16px;gap:8px;font-size:.95rem}.actions{gap:10px}}
+
+/* ---------- photos ---------- */
+.ph{margin:0;overflow:hidden;background:var(--paper-2);border-radius:2px}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(16px,3vh,40px) var(--section)}
+.hero__grid{display:grid;gap:clamp(28px,4vw,40px)}
+.hero h1{font-size:clamp(2.45rem,4.9vw,4.4rem);line-height:1;letter-spacing:-.035em;max-width:13ch}
+.hero .lede{margin-top:clamp(18px,2.2vw,26px);font-size:clamp(1.0625rem,1.3vw,1.2rem);color:var(--ink-2);max-width:36ch}
+.hero .actions{margin-top:clamp(26px,3.2vw,40px)}
+.hero__photo{position:relative}
+.hero__photo .ph{aspect-ratio:4/3}
+.stamp{position:absolute;z-index:2;width:clamp(104px,11vw,148px);height:auto;right:clamp(10px,2vw,28px);bottom:clamp(-44px,-3vw,-28px);color:var(--red);transform:rotate(-9deg);animation:press .7s var(--ease) .35s both}
+.stamp text{fill:currentColor}
+.stamp{filter:drop-shadow(0 10px 16px oklch(0.25 0.03 168 / .18))}
+@keyframes press{from{opacity:0;transform:rotate(-16deg) scale(1.3)}to{opacity:1;transform:rotate(-9deg) scale(1)}}
+@media (max-width:899px){
+  .hero__photo{order:-1;margin-inline:calc(var(--gutter) * -1)}
+  .hero__photo .ph{border-radius:0}
+  .stamp{right:var(--gutter)}
+  .hero__text{padding-top:12px}
+}
+@media (min-width:900px){
+  .hero{padding-top:clamp(36px,6vh,80px)}
+  .hero__grid{grid-template-columns:5fr 7fr;align-items:center;gap:clamp(40px,6vw,88px)}
+  .hero__photo .ph{aspect-ratio:5/4}
+  .stamp{left:clamp(-48px,-3.4vw,-32px);right:auto;bottom:clamp(-48px,-3.4vw,-32px)}
+}
+
+/* ---------- sections ---------- */
+.section{padding-block:var(--section)}
+.section h2,.visit h2{font-size:clamp(2rem,3.9vw,3.25rem);line-height:1.04;letter-spacing:-.03em;max-width:17ch}
+
+/* the counter */
+.offer{padding-top:0}
+.offer h2{margin-bottom:clamp(36px,5vw,72px)}
+.items{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:min(76vw,340px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);padding-inline:var(--gutter);margin-inline:calc(var(--gutter) * -1);padding-bottom:8px;scrollbar-width:none}
+.items::-webkit-scrollbar{display:none}
+.items li{scroll-snap-align:start}
+.items .ph{aspect-ratio:4/5}
+.items .ph img{transition:transform 1.1s var(--ease)}
+.items li:hover .ph img{transform:scale(1.04)}
+.items h3{margin-top:20px;font-size:clamp(1.2rem,1.7vw,1.45rem);line-height:1.15;letter-spacing:-.02em}
+.items p{margin-top:6px;color:var(--ink-2);font-size:.98rem;max-width:30ch}
+@media (min-width:900px){
+  .items{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px);overflow:visible;margin-inline:0;padding-inline:0}
+  .items li:nth-child(2){transform:translateY(64px)}
+  .offer{padding-bottom:calc(var(--section) + 64px)}
+}
+
+/* story */
+.story__grid{display:grid;gap:clamp(40px,6vw,96px);align-items:center}
+.story .ph{aspect-ratio:717/672;max-width:520px}
+.story p{margin-top:24px;font-size:clamp(1.0625rem,1.35vw,1.2rem);max-width:38ch}
+@media (min-width:900px){.story__grid{grid-template-columns:6fr 5fr}}
+
+/* atmosphere */
+.room{padding-top:0}
+.room h2{margin-bottom:clamp(32px,4vw,56px)}
+.room .ph{aspect-ratio:1600/800}
+
+/* ---------- visit + footer ---------- */
+.visit{background:var(--paper-2);padding-top:var(--section)}
+.visit__grid{display:grid;gap:clamp(40px,6vw,96px);align-items:start}
+.visit .actions{margin-top:clamp(28px,3.4vw,40px)}
+.visit .note{margin-top:20px;color:var(--ink-2);max-width:32ch}
+@media (min-width:900px){.visit__grid{grid-template-columns:1fr minmax(0,460px)}}
+
+/* the till receipt */
+.slipwrap{filter:drop-shadow(0 18px 26px oklch(0.25 0.03 168 / .14)) drop-shadow(0 1px 1px oklch(0.25 0.03 168 / .08))}
+.slip{--z:9px;background:var(--slip);padding:calc(28px + var(--z)) clamp(22px,3vw,36px);font-stretch:92%;
+  -webkit-mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/calc(2*var(--z)) 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--z)) 51% repeat-x;
+          mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/calc(2*var(--z)) 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--z)) 51% repeat-x}
+.slip__head{text-align:center;padding-bottom:18px;border-bottom:1px dashed var(--rule)}
+.slip__head b{display:block;font:400 1.6rem/1.1 var(--mark);color:var(--green-d)}
+.slip__head span{display:block;margin-top:6px;font-size:.95rem;color:var(--ink-2)}
+.slip__block{padding-block:22px;border-bottom:1px dashed var(--rule)}
+.slip__block:last-child{border-bottom:0;padding-bottom:0}
+.slip h3{font:600 .78rem/1.3 var(--text);font-stretch:100%;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;font-variant-numeric:tabular-nums}
+.row + .row{margin-top:8px}
+.row a{text-decoration-color:var(--rule);text-underline-offset:4px}
+.row a:hover{text-decoration-color:var(--red)}
+.now{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:.92rem;color:var(--ink-2)}
+.now .dot{width:8px;height:8px;border-radius:50%;background:var(--rule)}
+.now.is-open .dot{background:var(--green);box-shadow:0 0 0 4px color-mix(in oklch, var(--green) 18%, transparent)}
+
+.foot{margin-top:var(--section);padding-block:28px 36px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;font-size:.9rem;color:var(--ink-2)}
+.foot a{color:var(--ink-2);text-underline-offset:4px}
+.foot a:hover{color:var(--ink)}
+
+/* floating call button between hero and visit */
+.callfab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:0 20px;border-radius:999px;background:var(--green);color:var(--slip);text-decoration:none;font-weight:600;box-shadow:0 12px 26px -12px oklch(0.25 0.03 168 / .55);transform:translateY(150%);transition:transform .45s var(--ease),background-color .25s}
+.callfab svg{width:18px;height:18px}
+.callfab.is-on{transform:none}
+.callfab:hover{background:var(--green-d)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;animation-delay:0s !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Saltar para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2 1.4a11 11 0 0 0 7.1 7.1l1.4-2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21s-6.5-6.1-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.8" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#main">Queijaria Amaral</a>
+    <nav class="nav" aria-label="Principal" data-i18n-aria="navLabel">
+      <a href="#balcao" data-i18n="navCounter">O balcão</a>
+      <a href="#visitar" data-i18n="navVisit">Visitar</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="langLabel">
+      <button type="button" data-lang="pt-PT" aria-pressed="true" lang="pt-PT">PT</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <h1 id="h-hero" data-i18n="heroTitle">A queijaria mais antiga do Porto.</h1>
+        <p class="lede" data-i18n="heroLede">Queijo da Serra da Estrela, cerca de cinquenta queijos de todo o país, presunto e fumeiro. Rua&nbsp;de&nbsp;Santo&nbsp;Ildefonso,&nbsp;190.</p>
+        <div class="actions">
+          <a class="btn btn--solid" href="tel:+351222004162"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="call">Ligar</span>&nbsp;<span class="num">222 004 162</span></a>
+          <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=Queijaria+Amaral%2C+Rua+de+Santo+Ildefonso+190%2C+4000-507+Porto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="directions">Como chegar</span></a>
+        </div>
+      </div>
+      <div class="hero__photo">
+        <figure class="ph">
+          <img src="assets/img/balcao-roda-900.webp" srcset="assets/img/balcao-roda-900.webp 900w, assets/img/balcao-roda-1600.webp 1600w" sizes="(min-width: 900px) 58vw, 100vw" width="1600" height="1066" fetchpriority="high" decoding="async" alt="Uma grande roda de queijo aberta ao balcão, com prateleiras de queijos atrás" data-i18n-alt="altHero">
+        </figure>
+        <svg class="stamp" viewBox="0 0 140 140" role="img" aria-label="Desde 1928" data-i18n-aria="stampLabel">
+          <defs>
+            <path id="ring" d="M70 70m-51 0a51 51 0 1 1 102 0a51 51 0 1 1-102 0"/>
+            <filter id="ink" x="0" y="0" width="100%" height="100%">
+              <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7" result="n"/>
+              <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.15" result="m"/>
+              <feComposite in="SourceGraphic" in2="m" operator="in"/>
+            </filter>
+          </defs>
+          <circle cx="70" cy="70" r="69.5" fill="var(--slip)"/>
+          <g filter="url(#ink)" fill="none" stroke="currentColor">
+            <circle cx="70" cy="70" r="66" stroke-width="2.6"/>
+            <circle cx="70" cy="70" r="38" stroke-width="1.2"/>
+            <text font-family="Archivo, sans-serif" font-size="12.5" font-weight="700" letter-spacing="2.4" stroke="none"><textPath href="#ring" textLength="300" lengthAdjust="spacing">QUEIJARIA AMARAL · PORTO ·</textPath></text>
+            <text x="70" y="62" text-anchor="middle" font-family="Archivo, sans-serif" font-size="10" font-weight="600" letter-spacing="1.5" stroke="none" data-i18n="since">DESDE</text>
+            <text x="70" y="86" text-anchor="middle" font-family="Gloock, Georgia, serif" font-size="25" stroke="none">1928</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section offer" id="balcao" aria-labelledby="h-offer">
+    <div class="wrap">
+      <h2 id="h-offer" data-i18n="offerTitle">Do balcão para a sua mesa</h2>
+      <ul class="items">
+        <li>
+          <figure class="ph"><img src="assets/img/queijos-prateleira-382.webp" width="382" height="478" loading="lazy" decoding="async" alt="Prateleiras de pinho com queijos inteiros e às metades, com etiquetas de ardósia" data-i18n-alt="altCheese"></figure>
+          <h3 data-i18n="i1t">Queijos</h3>
+          <p data-i18n="i1d">Serra da Estrela e cerca de cinquenta de outras regiões.</p>
+        </li>
+        <li>
+          <figure class="ph"><img src="assets/img/presunto-queijos-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Dois presuntos pendurados por cima da vitrine dos queijos" data-i18n-alt="altHam"></figure>
+          <h3 data-i18n="i2t">Presunto e fumeiro</h3>
+          <p data-i18n="i2d">Presunto, enchidos fumados e pão de Bragança, Mirandela e Avintes.</p>
+        </li>
+        <li>
+          <figure class="ph"><img src="assets/img/tabua-480.webp" srcset="assets/img/tabua-480.webp 480w, assets/img/tabua-800.webp 800w" sizes="(min-width: 900px) 30vw, 76vw" width="800" height="1000" loading="lazy" decoding="async" alt="Tábua de ardósia com queijo fresco com canela e nozes, queijos curados, marmelada e compota" data-i18n-alt="altBoard"></figure>
+          <h3 data-i18n="i3t">Tábuas para provar</h3>
+          <p data-i18n="i3d">De queijos, de enchidos ou mistas, servidas na loja.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section story" aria-labelledby="h-story">
+    <div class="wrap story__grid">
+      <figure class="ph"><img src="assets/img/fachada-717.webp" width="717" height="672" loading="lazy" decoding="async" alt="A fachada verde da Queijaria Amaral, com o letreiro «desde 1928» e o toldo «Depósito de queijos da Serra e outros»" data-i18n-alt="altFront"></figure>
+      <div>
+        <h2 id="h-story" data-i18n="storyTitle">Quase um século ao balcão</h2>
+        <p data-i18n="storyBody">Loja histórica do programa Porto de Tradição. Diga-nos o que procura e ajudamos a escolher.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section room" aria-labelledby="h-room">
+    <div class="wrap">
+      <h2 id="h-room" data-i18n="roomTitle">Entre, prove, leve.</h2>
+      <figure class="ph"><img src="assets/img/letreiro-balcao-900.webp" srcset="assets/img/letreiro-balcao-900.webp 900w, assets/img/letreiro-balcao-1600.webp 1600w" sizes="(min-width: 1300px) 1240px, 92vw" width="1600" height="800" loading="lazy" decoding="async" alt="O letreiro antigo «Queijaria Amaral, Depósito» por cima do balcão, com presuntos pendurados e vigas de madeira" data-i18n-alt="altRoom"></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="visit" id="visitar" aria-labelledby="h-visit">
+  <div class="wrap visit__grid">
+    <div>
+      <h2 id="h-visit" data-i18n="visitTitle">Venha à loja</h2>
+      <p class="note" data-i18n="orders">Encomendas por telefone ou email.</p>
+      <div class="actions">
+        <a class="btn btn--solid" href="tel:+351222004162"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="call">Ligar</span></a>
+        <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=Queijaria+Amaral%2C+Rua+de+Santo+Ildefonso+190%2C+4000-507+Porto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="directions">Como chegar</span></a>
+      </div>
+    </div>
+    <div class="slipwrap">
+      <div class="slip">
+        <div class="slip__head">
+          <b>Queijaria Amaral</b>
+          <span>Rua de Santo Ildefonso, 190<br><span class="num" style="display:inline;margin:0">4000-507</span> Porto</span>
+        </div>
+        <div class="slip__block">
+          <h3 data-i18n="hoursLabel">Horário</h3>
+          <div class="row"><span data-i18n="monSat">Segunda a sábado</span><span data-i18n="hMonSat">9h – 19h</span></div>
+          <div class="row"><span data-i18n="sunday">Domingo</span><span data-i18n="closed">Fechado</span></div>
+          <p class="now" data-now hidden><span class="dot" aria-hidden="true"></span><span data-now-text></span></p>
+        </div>
+        <div class="slip__block">
+          <div class="row"><span data-i18n="phone">Telefone</span><a href="tel:+351222004162">222 004 162</a></div>
+          <div class="row"><span data-i18n="mobile">Telemóvel</span><a href="tel:+351964648557">964 648 557</a></div>
+          <div class="row"><a href="mailto:queijariaamaralporto@gmail.com">queijariaamaralporto@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot">
+    <a href="https://www.facebook.com/queijaria.amaral" target="_blank" rel="noopener">Facebook</a>
+    <span>© <span data-year>2026</span></span>
+  </div>
+</footer>
+
+<a class="callfab" href="tel:+351222004162" tabindex="-1" aria-hidden="true"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="call">Ligar</span></a>
+
+<script>
+(function () {
+  var root = document.documentElement;
+
+  /* ---------- i18n ---------- */
+  var EN = {
+    skip: 'Skip to content', navLabel: 'Main', langLabel: 'Language',
+    navCounter: 'The counter', navVisit: 'Visit',
+    heroTitle: 'Porto’s oldest cheese shop.',
+    heroLede: 'Serra da Estrela cheese, some fifty cheeses from across Portugal, presunto and smoked sausages. Rua de Santo Ildefonso, 190.',
+    call: 'Call', directions: 'Get directions',
+    stampLabel: 'Since 1928', since: 'SINCE',
+    offerTitle: 'From our counter to your table',
+    i1t: 'Cheese', i1d: 'Serra da Estrela and some fifty more from other regions.',
+    i2t: 'Presunto and smoked goods', i2d: 'Cured ham, smoked sausages and bread from Bragança, Mirandela and Avintes.',
+    i3t: 'Boards to taste', i3d: 'Cheese, charcuterie or mixed, served in the shop.',
+    storyTitle: 'Nearly a century at the counter',
+    storyBody: 'A historic shop in the city’s Porto de Tradição programme. Tell us what you are after and we will help you choose.',
+    roomTitle: 'Come in, taste, take home.',
+    visitTitle: 'Visit the shop',
+    orders: 'Orders by phone or email.',
+    hoursLabel: 'Opening hours', monSat: 'Monday to Saturday', hMonSat: '9 am – 7 pm', sunday: 'Sunday', closed: 'Closed',
+    phone: 'Phone', mobile: 'Mobile',
+    altHero: 'A large cheese wheel cut open on the counter, with shelves of cheeses behind',
+    altCheese: 'Pine shelves of whole and halved cheeses with slate labels',
+    altHam: 'Two cured hams hanging above the cheese counter',
+    altBoard: 'A slate board with fresh cheese topped with cinnamon and walnuts, cured cheeses, quince paste and jam',
+    altFront: 'The green Queijaria Amaral storefront, with its “since 1928” sign and an awning reading “Depósito de queijos da Serra e outros”',
+    altRoom: 'The old “Queijaria Amaral, Depósito” sign above the counter, with hams hanging from the wooden beams',
+    title: 'Queijaria Amaral · Cheese shop in Porto’s Baixa since 1928',
+    desc: 'Porto’s oldest cheese shop. Serra da Estrela cheese, some fifty cheeses, presunto and smoked sausages. Rua de Santo Ildefonso, 190.',
+    open: 'Open now', closedNow: 'Closed now'
+  };
+  var PT = {
+    title: document.title,
+    desc: document.querySelector('meta[name="description"]').content,
+    open: 'Aberto agora', closedNow: 'Fechado agora'
+  };
+  var nodes = document.querySelectorAll('[data-i18n]');
+  var alts = document.querySelectorAll('[data-i18n-alt]');
+  var arias = document.querySelectorAll('[data-i18n-aria]');
+  nodes.forEach(function (n) { PT[n.dataset.i18n] = n.textContent; });
+  alts.forEach(function (n) { PT[n.dataset.i18nAlt] = n.alt; });
+  arias.forEach(function (n) { PT[n.dataset.i18nAria] = n.getAttribute('aria-label'); });
+  var dict = PT;
+
+  function isOpen() {
+    var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Lisbon', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+    var o = {}; parts.forEach(function (p) { o[p.type] = p.value; });
+    var mins = (+o.hour % 24) * 60 + +o.minute;
+    return o.weekday !== 'Sun' && mins >= 9 * 60 && mins < 19 * 60;
+  }
+  function paintNow() {
+    var now = document.querySelector('[data-now]');
+    try {
+      var open = isOpen();
+      now.classList.toggle('is-open', open);
+      now.querySelector('[data-now-text]').textContent = open ? dict.open : dict.closedNow;
+      now.hidden = false;
+    } catch (e) { now.hidden = true; }
+  }
+  function setLang(lang) {
+    dict = lang === 'en' ? EN : PT;
+    root.lang = lang;
+    nodes.forEach(function (n) { var v = dict[n.dataset.i18n]; if (v != null) n.textContent = v; });
+    alts.forEach(function (n) { n.alt = dict[n.dataset.i18nAlt]; });
+    arias.forEach(function (n) { n.setAttribute('aria-label', dict[n.dataset.i18nAria]); });
+    document.title = dict.title;
+    document.querySelector('meta[name="description"]').content = dict.desc;
+    document.querySelectorAll('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    paintNow();
+  }
+  document.querySelectorAll('[data-lang]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      setLang(b.dataset.lang);
+      try { localStorage.setItem('qa-lang', b.dataset.lang); } catch (e) {}
+    });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem('qa-lang'); } catch (e) {}
+  if (saved === 'en') setLang('en'); else paintNow();
+  document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+  /* ---------- header rule, call button ---------- */
+  var top = document.getElementById('top');
+  var hero = document.querySelector('.hero');
+  var visit = document.getElementById('visitar');
+  var fab = document.querySelector('.callfab');
+  var ticking = false;
+  function frame() {
+    ticking = false;
+    var vh = window.innerHeight;
+    top.classList.toggle('is-stuck', window.scrollY > 8);
+    var past = hero.getBoundingClientRect().bottom < 0;
+    var before = visit.getBoundingClientRect().top > vh * 0.6;
+    fab.classList.toggle('is-on', past && before);
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  frame();
+})();
+</script>
+</body>
+</html>
