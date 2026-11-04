@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbearia Tinoco · Corte e barba desde 1929 · Porto</title>
+<meta name="description" content="Barbearia Art Déco de 1929 na Rua Sá da Bandeira 13, Porto. Corte, barba ou os dois. Marque online ou ligue 912 265 723.">
+<meta name="theme-color" content="#f4f1ec">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/sala-espelhos-640.webp" imagesrcset="assets/img/sala-espelhos-640.webp 640w, assets/img/sala-espelhos-1020.webp 1020w" imagesizes="(min-width: 900px) 44vw, 88vw" fetchpriority="high">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarberShop","name":"Barbearia Tinoco","foundingDate":"1929","telephone":"+351912265723","email":"barbeariatinoco1929@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua Sá da Bandeira 13","postalCode":"4000-433","addressLocality":"Porto","addressCountry":"PT"},"openingHours":"Tu-Sa 10:00-19:00","sameAs":["https://www.instagram.com/barbeariatinoco1929/","https://www.facebook.com/BarbeariaTinoco/"]}
+</script>
+<style>
+:root {
+  /* Marble, ink, wall oxblood, gilt: the room's own materials, muted (chroma cut ~25%) */
+  --marble: oklch(0.965 0.007 80);
+  --marble-deep: oklch(0.93 0.01 78);
+  --vein: oklch(0.86 0.012 75);
+  --ink: oklch(0.23 0.014 35);
+  --ink-soft: oklch(0.43 0.016 40);
+  --oxblood: oklch(0.43 0.079 24);
+  --oxblood-hover: oklch(0.37 0.075 24);
+  --brass: oklch(0.72 0.053 80);
+  --brass-ink: oklch(0.49 0.051 72);
+  --band: oklch(0.27 0.0135 30);
+  --band-soft: oklch(0.8 0.014 70);
+
+  --display: "Antonio", "Arial Narrow", sans-serif;
+  --body: "Jost", "Futura", system-ui, sans-serif;
+  --pad-x: clamp(20px, 5vw, 72px);
+  --pad-y: clamp(96px, 12vh, 160px);
+  --max: 1240px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  background: var(--marble);
+  color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+::selection { background: color-mix(in oklch, var(--brass) 45%, transparent); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--oxblood); outline-offset: 3px; border-radius: 2px; }
+html { scrollbar-color: var(--vein) var(--marble); }
+
+.skip { position: absolute; left: 12px; top: -60px; z-index: 50; padding: 10px 16px; background: var(--ink); color: var(--marble); text-decoration: none; }
+.skip:focus { top: 12px; }
+
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad-x); }
+
+h1, h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  line-height: 0.96;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.75rem, 1.9rem + 5.2vw, 5.75rem); }
+h2 { font-size: clamp(2.25rem, 1.6rem + 3vw, 3.75rem); }
+p { margin: 0; text-wrap: pretty; }
+.lead { font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); color: var(--ink-soft); max-width: 34ch; }
+
+/* ---------- buttons ---------- */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 0 24px;
+  font: 500 1rem/1 var(--body); letter-spacing: 0.02em;
+  text-decoration: none; border-radius: 999px;
+  transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+}
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn-primary { background: var(--oxblood); color: oklch(0.98 0.005 80); }
+.btn-primary:hover { background: var(--oxblood-hover); }
+.btn-ghost { border: 1px solid color-mix(in oklch, var(--ink) 28%, transparent); color: var(--ink); }
+.btn-ghost:hover { border-color: var(--ink); }
+.link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--oxblood); font-weight: 500; text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklch, var(--oxblood) 35%, transparent);
+  padding-bottom: 2px; transition: border-color .25s var(--ease), gap .25s var(--ease);
+}
+.link:hover { border-color: var(--oxblood); gap: 12px; }
+.link svg { width: 16px; height: 16px; }
+
+/* ---------- header ---------- */
+.top {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in oklch, var(--marble) 92%, transparent);
+  backdrop-filter: saturate(1.2) blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s var(--ease);
+}
+.top.is-scrolled { border-bottom-color: var(--vein); }
+.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 64px; }
+.mark { text-decoration: none; display: flex; align-items: baseline; gap: 8px; margin-right: auto; }
+.mark b { font: 700 1.5rem/1 var(--display); letter-spacing: 0.04em; text-transform: uppercase; }
+.mark small { font: 500 0.75rem/1 var(--body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-ink); }
+.nav { display: none; gap: 28px; }
+.nav a { text-decoration: none; font-size: 0.9375rem; color: var(--ink-soft); transition: color .2s; }
+.nav a:hover { color: var(--ink); }
+.lang { display: flex; gap: 2px; font: 500 0.8125rem/1 var(--body); letter-spacing: 0.08em; }
+.lang button {
+  font: inherit; letter-spacing: inherit; color: var(--ink-soft);
+  background: none; border: 0; padding: 0 8px; min-width: 44px; min-height: 44px; cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+.lang button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--brass); }
+.top .btn { min-height: 40px; padding: 0 18px; font-size: 0.9375rem; display: none; }
+.top.show-cta .btn { display: inline-flex; }
+@media (min-width: 900px) { .nav { display: flex; } }
+
+/* ---------- the arch (mirror) ---------- */
+.arch { position: relative; margin: 0; }
+.arch .glass {
+  position: relative; overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+  background: var(--marble-deep);
+}
+.arch img { width: 100%; height: 100%; object-fit: cover; transition: scale 1.2s var(--ease); }
+.arch::before {
+  /* the gilt frame: a hairline set off the glass */
+  content: ""; position: absolute; inset: -9px -9px 12px;
+  border: 1px solid var(--brass); border-bottom: 0;
+  border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+  pointer-events: none;
+}
+.arch::after {
+  /* the marble counter under each mirror */
+  content: ""; display: block; height: 12px; margin: 0 -18px;
+  background: var(--marble-deep);
+  border-top: 1px solid var(--vein);
+}
+
+/* ---------- hero ---------- */
+.hero { padding: clamp(20px, 4vh, 64px) 0 var(--pad-y); }
+.hero .wrap { display: grid; gap: 28px; }
+/* phones: keep the booking button inside the first screen */
+.hero .arch { width: min(100%, 520px, 25svh + 40px); justify-self: center; }
+.hero-text { display: grid; gap: 22px; align-content: center; }
+@media (min-width: 900px) { .hero-text { gap: 28px; } }
+@media (min-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 112px); align-items: center; }
+  .hero .arch { order: 2; justify-self: end; width: min(100%, 520px); }
+  .hero-text { order: 1; }
+}
+
+/* ---------- sections ---------- */
+section { padding: var(--pad-y) 0; }
+.split { display: grid; gap: 56px; align-items: center; }
+.split .arch { width: min(100%, 440px); justify-self: center; }
+.copy { display: grid; gap: 24px; max-width: 30rem; }
+@media (min-width: 900px) {
+  .split { grid-template-columns: 1fr 1fr; gap: clamp(56px, 8vw, 128px); }
+  .split.flip .arch { order: 2; }
+}
+
+/* price board */
+.board { list-style: none; margin: 8px 0 0; padding: 0; }
+.board li {
+  display: flex; align-items: baseline; gap: 14px;
+  padding: 18px 0;
+}
+.board .name { font: 600 clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem)/1.1 var(--display); text-transform: uppercase; letter-spacing: 0.02em; }
+.board .dots { flex: 1; border-bottom: 1px dotted var(--brass); transform: translateY(-5px); min-width: 24px; }
+.board .price { font: 500 1.25rem/1 var(--body); font-variant-numeric: tabular-nums lining-nums; }
+.note { color: var(--ink-soft); font-size: 0.9875rem; }
+
+/* the room: a row of stations */
+.room { background: var(--marble-deep); }
+.room .head { display: grid; gap: 24px; max-width: 40rem; margin-bottom: clamp(56px, 8vh, 96px); }
+.room .head p { color: var(--ink-soft); max-width: 46ch; }
+.row {
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(68vw, 300px);
+  gap: 36px; align-items: start; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 12px var(--pad-x) 8px; margin: 0 calc(var(--pad-x) * -1);
+  scrollbar-width: none;
+}
+.row::-webkit-scrollbar { display: none; }
+.row .arch { scroll-snap-align: center; }
+.row .arch::after { background: var(--marble); }
+@media (min-width: 900px) {
+  .row { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); grid-auto-columns: auto; overflow: visible; padding: 12px 0 0; margin: 0; gap: clamp(28px, 3vw, 48px); }
+  .row .arch:nth-child(even) { margin-top: 64px; }
+}
+.row .arch:hover img { scale: 1.04; }
+
+/* visit band: the one muted dark band */
+.visit { background: var(--band); color: var(--marble); }
+.visit h2 { max-width: 12ch; }
+.visit .grid { display: grid; gap: 56px; }
+.facts { display: grid; gap: 32px; margin: 0; }
+.facts div { display: grid; gap: 6px; }
+.facts dt { font-size: 0.8125rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); }
+.facts dd { margin: 0; font-size: 1.125rem; }
+.facts a { text-decoration-color: color-mix(in oklch, var(--brass) 60%, transparent); text-underline-offset: 4px; }
+.visit .btn-primary { background: var(--marble); color: var(--ink); }
+.visit .btn-primary:hover { background: oklch(0.9 0.012 78); }
+.visit .btn-ghost { color: var(--marble); border-color: color-mix(in oklch, var(--marble) 35%, transparent); }
+.visit .btn-ghost:hover { border-color: var(--marble); }
+.visit .lead { color: var(--band-soft); }
+@media (min-width: 900px) {
+  .visit .grid { grid-template-columns: 1.1fr 1fr; align-items: end; gap: clamp(56px, 8vw, 128px); }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .facts .wide { grid-column: 1 / -1; }
+}
+
+/* footer */
+footer { padding: 56px 0 40px; font-size: 0.9375rem; color: var(--ink-soft); }
+footer .wrap { display: grid; gap: 20px; }
+footer .line { display: flex; flex-wrap: wrap; gap: 4px 28px; align-items: center; }
+footer a { text-decoration: none; display: inline-block; padding: 10px 0; }
+footer a:hover { color: var(--ink); }
+footer .credit { font-size: 0.8125rem; color: color-mix(in oklch, var(--ink-soft) 85%, var(--marble)); }
+footer .mark b { font-size: 1.25rem; }
+
+/* ---------- motion (only with JS and no reduced-motion preference) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  /* the one entrance: the room's mirrors unveil along the row, quickly */
+  .js .reveal .glass { clip-path: inset(30% 0 0 0 round 0); opacity: 0; transition: clip-path .8s var(--ease), opacity .5s var(--ease); }
+  .js .reveal.is-in .glass { clip-path: inset(0 0 0 0 round 0); opacity: 1; }
+  .js .row .reveal:nth-child(2) .glass { transition-delay: .08s; }
+  .js .row .reveal:nth-child(3) .glass { transition-delay: .16s; }
+  .js .row .reveal:nth-child(4) .glass { transition-delay: .24s; }
+  @supports (animation-timeline: view()) {
+    .drift img { animation: drift linear both; animation-timeline: view(); }
+    @keyframes drift { from { transform: translateY(-4%) scale(1.08); } to { transform: translateY(4%) scale(1.08); } }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .arch img, .btn, .link { transition: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo" data-i18n="skip">Saltar para o conteúdo</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="mark" href="#inicio" aria-label="Barbearia Tinoco, início" data-i18n-attr="aria-label:homeLabel"><b>Tinoco</b><small>1929</small></a>
+    <nav class="nav" aria-label="Principal" data-i18n-attr="aria-label:navLabel">
+      <a href="#servicos" data-i18n="navServices">Serviços</a>
+      <a href="#sala" data-i18n="navRoom">A sala</a>
+      <a href="#visitar" data-i18n="navVisit">Visitar</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label:langLabel">
+      <button type="button" data-lang="pt-PT" aria-pressed="true" lang="pt-PT">PT</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+    <a class="btn btn-primary" href="https://buk.pt/barbearia-tinoco-1929" target="_blank" rel="noopener" data-i18n="ctaBookShort">Marcar</a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="inicio" aria-labelledby="h-hero">
+    <div class="wrap">
+      <figure class="arch">
+        <div class="glass drift">
+          <img src="assets/img/sala-espelhos-640.webp" srcset="assets/img/sala-espelhos-640.webp 640w, assets/img/sala-espelhos-1020.webp 1020w" sizes="(min-width: 900px) 44vw, 88vw" width="1020" height="1279" fetchpriority="high" decoding="async"
+            alt="A sala da Barbearia Tinoco: paredes cor de vinho, espelhos em arco com molduras douradas, lavatórios e um barbeiro a cortar, visto no reflexo" data-i18n-attr="alt:altHero">
+        </div>
+      </figure>
+      <div class="hero-text">
+        <h1 id="h-hero" data-i18n="heroTitle">Corte e barba numa sala de 1929</h1>
+        <p class="lead" data-i18n="heroLead">Barbearia Art Déco na Rua Sá da Bandeira, na Baixa do Porto.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://buk.pt/barbearia-tinoco-1929" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+            <span data-i18n="ctaBook">Marcar online</span>
+          </a>
+          <a class="btn btn-ghost" href="tel:+351912265723">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.7 4.2-2.2 1.4a11 11 0 0 0 6.4 6.4l1.4-2.2L20 15.5V19a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg>
+            <span><span data-i18n="ctaCall">Ligar</span> 912 265 723</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" aria-labelledby="h-servicos">
+    <div class="wrap split">
+      <figure class="arch">
+        <div class="glass drift">
+          <img src="assets/img/barba-tesoura-1000.webp" width="1000" height="1500" loading="lazy" decoding="async"
+            alt="Barbeiro a aparar uma barba cheia com tesoura, cliente de capa às riscas" data-i18n-attr="alt:altServices">
+        </div>
+      </figure>
+      <div class="copy">
+        <h2 id="h-servicos" data-i18n="servicesTitle">Corte, barba ou os dois</h2>
+        <ul class="board">
+          <li><span class="name" data-i18n="svcCut">Corte</span><span class="dots" aria-hidden="true"></span><span class="price">20 €</span></li>
+          <li><span class="name" data-i18n="svcBoth">Corte e barba</span><span class="dots" aria-hidden="true"></span><span class="price">30 €</span></li>
+          <li><span class="name" data-i18n="svcBeard">Barba</span><span class="dots" aria-hidden="true"></span><span class="price">20 €</span></li>
+        </ul>
+        <p class="note" data-i18n="servicesNote">Para homens e mulheres.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="room" id="sala" aria-labelledby="h-sala">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="h-sala" data-i18n="roomTitle">Uma sala que é património</h2>
+        <p data-i18n="roomText">Lavatórios de mármore, chão de mosaico em leque, cadeiras de ferro, espelhos grandes e um velho aquecedor de toalhas a vapor.</p>
+      </div>
+      <div class="row">
+        <figure class="arch reveal"><div class="glass"><img src="assets/img/cadeira-ferro-700.webp" width="700" height="874" loading="lazy" decoding="async" alt="Cadeira de barbeiro em carvalho e ferro sobre o chão de mosaico" data-i18n-attr="alt:altChair"></div></figure>
+        <figure class="arch reveal"><div class="glass"><img src="assets/img/registadora-marmore-720.webp" width="720" height="900" loading="lazy" decoding="async" alt="Caixa registadora antiga, verde, sobre um balcão de mármore" data-i18n-attr="alt:altRegister"></div></figure>
+        <figure class="arch reveal"><div class="glass"><img src="assets/img/prateleira-navalhas-720.webp" width="720" height="900" loading="lazy" decoding="async" alt="Prateleira com navalhas antigas, ferramentas de barbeiro e a placa Tinoco na parede vermelha" data-i18n-attr="alt:altShelf"></div></figure>
+        <figure class="arch reveal"><div class="glass"><img src="assets/img/lavatorios-marmore-432.webp" width="432" height="540" loading="lazy" decoding="async" alt="Lavatórios de mármore com a placa Barbearia Tinoco 1929 e um barbeiro a trabalhar ao fundo" data-i18n-attr="alt:altBasins"></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia" aria-labelledby="h-historia">
+    <div class="wrap split flip">
+      <figure class="arch">
+        <div class="glass drift">
+          <img src="assets/img/fachada-sa-da-bandeira-720.webp" width="720" height="900" loading="lazy" decoding="async"
+            alt="Fachada da Barbearia Tinoco no número 13 da Rua Sá da Bandeira, com a placa dourada e o poste de barbeiro" data-i18n-attr="alt:altFacade">
+        </div>
+      </figure>
+      <div class="copy">
+        <h2 id="h-historia" data-i18n="storyTitle">Na mesma porta desde 1929</h2>
+        <p data-i18n="storyText">Abriu em 1929 e já consta do almanaque de 1930. Faz parte do programa Porto de Tradição e foi das primeiras barbearias do Porto com mulheres barbeiras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visitar" aria-labelledby="h-visitar">
+    <div class="wrap grid">
+      <div class="copy">
+        <h2 id="h-visitar" data-i18n="visitTitle">Passe pela Sá da Bandeira</h2>
+        <p class="lead" data-i18n="visitLead">Na Baixa, entre São Bento e o Bolhão.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://buk.pt/barbearia-tinoco-1929" target="_blank" rel="noopener" data-i18n="ctaBook">Marcar online</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Barbearia%20Tinoco%2C%20Rua%20S%C3%A1%20da%20Bandeira%2013%2C%20Porto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            <span data-i18n="ctaDirections">Como chegar</span>
+          </a>
+        </div>
+      </div>
+      <dl class="facts">
+        <div class="wide"><dt data-i18n="factAddress">Morada</dt><dd>Rua Sá da Bandeira 13, 4000-433 Porto</dd></div>
+        <div><dt data-i18n="factHours">Horário</dt><dd data-i18n="hours">Terça a sábado, 10h às 19h</dd></div>
+        <div><dt data-i18n="factContact">Contacto</dt><dd><a href="tel:+351912265723">912 265 723</a><br><a href="mailto:barbeariatinoco1929@gmail.com">barbeariatinoco1929@gmail.com</a></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="line">
+      <a class="mark" href="#inicio" aria-label="Barbearia Tinoco, início" data-i18n-attr="aria-label:homeLabel"><b>Barbearia Tinoco</b></a>
+      <span>Rua Sá da Bandeira 13, Porto</span>
+      <span data-i18n="hoursShort">Ter–sáb, 10h–19h</span>
+      <a href="tel:+351912265723">912 265 723</a>
+      <a href="https://www.instagram.com/barbeariatinoco1929/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/BarbeariaTinoco/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <p class="credit" data-i18n="credit">Fotos: Shop in Porto, Visit Porto, Comércio com História; Unsplash (serviços).</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var doc = document.documentElement;
+  doc.classList.add('js');
+
+  var EN = {
+    skip: 'Skip to content',
+    homeLabel: 'Barbearia Tinoco, home',
+    navLabel: 'Main',
+    langLabel: 'Language',
+    navServices: 'Services',
+    navRoom: 'The room',
+    navVisit: 'Visit',
+    ctaBookShort: 'Book',
+    ctaBook: 'Book online',
+    ctaCall: 'Call',
+    ctaDirections: 'Directions',
+    heroTitle: 'Cuts and beards in a 1929 room',
+    heroLead: 'An Art Deco barbershop on Rua Sá da Bandeira, in downtown Porto.',
+    altHero: 'The Barbearia Tinoco room: wine-red walls, arched mirrors in gilt frames, basins and a barber cutting hair, seen in the reflection',
+    servicesTitle: 'Haircut, beard, or both',
+    svcCut: 'Haircut',
+    svcBoth: 'Haircut and beard',
+    svcBeard: 'Beard',
+    servicesNote: 'For men and women.',
+    altServices: 'Barber trimming a full beard with scissors, client in a striped cape',
+    roomTitle: 'A room that is city heritage',
+    roomText: 'Marble basins, a fan-pattern mosaic floor, iron chairs, large mirrors and an old steam towel warmer.',
+    altChair: 'Oak and iron barber chair on the mosaic floor',
+    altRegister: 'Old green cash register on a marble counter',
+    altShelf: 'Shelf of antique razors, barber tools and the Tinoco sign on the red wall',
+    altBasins: 'Marble basins with the Barbearia Tinoco 1929 sign and a barber at work behind',
+    storyTitle: 'The same door since 1929',
+    storyText: 'Opened in 1929 and listed in the 1930 almanac, it belongs to the Porto de Tradição programme and was one of the first barbershops in Porto with women barbers.',
+    altFacade: 'Barbearia Tinoco shop front at number 13 Rua Sá da Bandeira, with the gold sign and barber pole',
+    visitTitle: 'Drop by Sá da Bandeira',
+    visitLead: 'Downtown, between São Bento and Bolhão.',
+    factAddress: 'Address',
+    factHours: 'Hours',
+    factContact: 'Contact',
+    hours: 'Tuesday to Saturday, 10am to 7pm',
+    hoursShort: 'Tue–Sat, 10am–7pm',
+    credit: 'Photos: Shop in Porto, Visit Porto, Comércio com História; Unsplash (services).'
+  };
+  var META = {
+    'pt-PT': { title: document.title, desc: document.querySelector('meta[name=description]').content },
+    en: { title: 'Barbearia Tinoco · Cuts and beards since 1929 · Porto', desc: 'A 1929 Art Deco barbershop at Rua Sá da Bandeira 13, Porto. Haircut, beard, or both. Book online or call 912 265 723.' }
+  };
+
+  var textEls = document.querySelectorAll('[data-i18n]');
+  var attrEls = document.querySelectorAll('[data-i18n-attr]');
+  var PT = {};
+  textEls.forEach(function (el) { PT[el.dataset.i18n] = el.textContent; });
+  attrEls.forEach(function (el) {
+    el.dataset.i18nAttr.split(';').forEach(function (pair) {
+      var p = pair.split(':'); PT[p[1]] = el.getAttribute(p[0]);
+    });
+  });
+
+  function setLang(lang) {
+    var dict = lang === 'en' ? EN : PT;
+    textEls.forEach(function (el) { var v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
+    attrEls.forEach(function (el) {
+      el.dataset.i18nAttr.split(';').forEach(function (pair) {
+        var p = pair.split(':'); if (dict[p[1]] != null) el.setAttribute(p[0], dict[p[1]]);
+      });
+    });
+    doc.lang = lang;
+    document.title = META[lang].title;
+    document.querySelector('meta[name=description]').content = META[lang].desc;
+    document.querySelectorAll('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+  }
+
+  document.querySelectorAll('[data-lang]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      setLang(b.dataset.lang);
+      try { localStorage.setItem('tinoco-lang', b.dataset.lang); } catch (e) {}
+    });
+  });
+  // Only a visitor's own earlier choice changes the language; never the browser locale.
+  try { if (localStorage.getItem('tinoco-lang') === 'en') setLang('en'); } catch (e) {}
+
+  // Header: hairline once scrolled; its Book button only while neither hero nor visit band (which carry their own CTAs) is in view.
+  var top = document.getElementById('top');
+  var inView = { inicio: true, visitar: false };
+  function sync() { top.classList.toggle('show-cta', !inView.inicio && !inView.visitar); }
+  window.addEventListener('scroll', function () { top.classList.toggle('is-scrolled', window.scrollY > 8); }, { passive: true });
+
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+    return;
+  }
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { inView[e.target.id] = e.isIntersecting; });
+    sync();
+  }, { threshold: 0.15 }).observe(document.getElementById('inicio'));
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { inView.visitar = e.isIntersecting; });
+    sync();
+  }, { threshold: 0.1 }).observe(document.getElementById('visitar'));
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
